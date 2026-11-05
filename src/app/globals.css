@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+[data-theme="obsidian"] {
+  --background: #090a0f;
+  --foreground: #f3f4f6;
+  --muted: #131722;
+  --muted-foreground: #9ca3af;
+  --border: #222738;
+  --accent: #3b82f6;
+  --accent-foreground: #ffffff;
+  --card: #111420;
+  --card-foreground: #f9fafb;
+  --card-border: #1e2438;
+  --badge-bg: #1e293b;
+  --badge-text: #93c5fd;
+  --selection: #3b82f6;
+}
+
+[data-theme="swiss"] {
+  --background: #fbfbfb;
+  --foreground: #111111;
+  --muted: #f0f0f0;
+  --muted-foreground: #666666;
+  --border: #e0e0e0;
+  --accent: #e53e3e;
+  --accent-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --card-border: #eaeaea;
+  --badge-bg: #fee2e2;
+  --badge-text: #b91c1c;
+  --selection: #e53e3e;
+}
+
+[data-theme="terminal"] {
+  --background: #050d08;
+  --foreground: #22c55e;
+  --muted: #0b1a0f;
+  --muted-foreground: #15803d;
+  --border: #14532d;
+  --accent: #4ade80;
+  --accent-foreground: #022c22;
+  --card: #08140c;
+  --card-foreground: #86efac;
+  --card-border: #166534;
+  --badge-bg: #14532d;
+  --badge-text: #86efac;
+  --selection: #22c55e;
+}
+
+[data-theme="brutalist"] {
+  --background: #fdfbf7;
+  --foreground: #000000;
+  --muted: #f4efe6;
+  --muted-foreground: #333333;
+  --border: #000000;
+  --accent: #fbbf24;
+  --accent-foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --card-border: #000000;
+  --badge-bg: #ffedd5;
+  --badge-text: #000000;
+  --selection: #fbbf24;
+}
+
+[data-theme="warm"] {
+  --background: #f7f4ed;
+  --foreground: #2d2a26;
+  --muted: #ece6da;
+  --muted-foreground: #706b63;
+  --border: #dfd8cb;
+  --accent: #c2410c;
+  --accent-foreground: #ffffff;
+  --card: #ffffff;
+  --card-foreground: #2d2a26;
+  --card-border: #e2dbce;
+  --badge-bg: #ffedd5;
+  --badge-text: #9a3412;
+  --selection: #c2410c;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: var(--selection);
+  color: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Brutalist card shadows when active */
+[data-theme="brutalist"] .brutalist-shadow {
+  box-shadow: 4px 4px 0px #000000;
+}
+
+[data-theme="brutalist"] .brutalist-button {
+  box-shadow: 3px 3px 0px #000000;
+  border: 2px solid #000000;
+}
+
+[data-theme="brutalist"] .brutalist-button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #000000;
+}

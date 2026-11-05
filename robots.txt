@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /legacy/
 
-Sitemap: https://shamiltp.me/sitemap.xml
+Sitemap: https://shamiltp.life/sitemap.xml
