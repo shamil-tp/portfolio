@@ -137,9 +137,9 @@ function StaticHomePage() {
             <div className="relative w-44 h-44 sm:w-56 sm:h-56 rounded-3xl overflow-hidden border-2 border-[var(--border)] bg-[var(--muted)] shadow-2xl group-hover:border-[var(--accent)] transition-colors">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/img/profile-400.jpg"
+                src="/myProfileImg.jpeg"
                 alt="Portrait of Shamil TP"
-                className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover object-top grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
               />
             </div>
             <div className="absolute -bottom-3 -right-3 px-3 py-1 rounded-xl bg-[var(--card)] border border-[var(--border)] text-[11px] font-mono shadow-lg flex items-center gap-1.5">
@@ -547,9 +547,9 @@ function AnimatedHomePage() {
             <div className="relative w-44 h-44 sm:w-56 sm:h-56 rounded-3xl overflow-hidden border-2 border-[var(--border)] bg-[var(--muted)] shadow-2xl group-hover:border-[var(--accent)] transition-colors">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/img/profile-400.jpg"
+                src="/myProfileImg.jpeg"
                 alt="Portrait of Shamil TP"
-                className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full object-cover object-top grayscale contrast-125 group-hover:grayscale-0 transition-all duration-500"
               />
             </div>
             <div className="absolute -bottom-3 -right-3 px-3 py-1 rounded-xl bg-[var(--card)] border border-[var(--border)] text-[11px] font-mono shadow-lg flex items-center gap-1.5">

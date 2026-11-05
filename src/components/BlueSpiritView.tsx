@@ -210,12 +210,12 @@ export function BlueSpiritView() {
           <div className="lg:col-span-5 relative flex justify-center">
             {/* Visual poster frame with layered artwork */}
             <div className="relative w-full max-w-[420px] aspect-[4/5] rounded-xl overflow-hidden border-2 border-[var(--border)] bg-[#07101d] shadow-2xl group">
-              {/* Main character poster illustration */}
+              {/* Shamil TP's Portrait Photo */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/assets/img/blue-spirit-hero.png"
-                alt="The Blue Spirit character illustration in moonlit bamboo forest"
-                className="w-full h-full object-cover contrast-115 group-hover:scale-105 transition-transform duration-700 ease-out"
+                src="/myProfileImg.jpeg"
+                alt="Portrait of Shamil TP — The Blue Spirit"
+                className="w-full h-full object-cover object-top contrast-115 group-hover:scale-105 transition-transform duration-700 ease-out"
               />
 
               {/* Top Japanese Poster Header Overlay */}
@@ -223,7 +223,7 @@ export function BlueSpiritView() {
                 <div className="flex items-center gap-2">
                   <SpiritMaskIcon className="w-5 h-5 text-[var(--accent)]" />
                   <span className="font-calligraphy text-sm text-[var(--foreground)] tracking-widest">
-                    蒼霊録
+                    蒼霊録 · SHAMIL TP
                   </span>
                 </div>
                 <span className="text-[10px] font-tech text-[var(--muted-foreground)] tracking-wider">
@@ -330,14 +330,22 @@ export function BlueSpiritView() {
             </div>
           </div>
 
-          {/* Mask Seal Graphic on the right */}
-          <div className="lg:col-span-3 flex flex-col items-center justify-center p-8 rounded-xl border border-[var(--border)] bg-[var(--card)] text-center space-y-4">
-            <div className="w-24 h-24 rounded-full border border-[var(--accent)]/40 p-2 flex items-center justify-center bg-[#0c192c]/50">
-              <SpiritMaskIcon className="w-16 h-16 text-[var(--accent)]" />
+          {/* Mask Seal Graphic & Portrait on the right */}
+          <div className="lg:col-span-3 flex flex-col items-center justify-center p-6 rounded-xl border border-[var(--border)] bg-[var(--card)] text-center space-y-4">
+            <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-[var(--border)] shadow-lg group">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/myProfileImg.jpeg"
+                alt="Portrait of Shamil TP"
+                className="w-full h-full object-cover object-top contrast-110 group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute bottom-1 right-1 p-1 rounded-md bg-[#07101d]/90 border border-[var(--accent)]">
+                <SpiritMaskIcon className="w-3.5 h-3.5 text-[var(--accent)]" />
+              </div>
             </div>
 
             <div className="space-y-1">
-              <h3 className="font-calligraphy text-lg text-[var(--foreground)]">
+              <h3 className="font-calligraphy text-base text-[var(--foreground)]">
                 信条：誠心誠意
               </h3>
               <p className="text-xs font-tech text-[var(--muted-foreground)]">
