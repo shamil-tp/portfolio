@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 const THEME_OPTIONS: { id: Theme; name: string; icon: React.ReactNode; color: string }[] = [
+  { id: "bluespirit", name: "The Blue Spirit", icon: <span className="font-serif font-bold text-xs">蒼</span>, color: "#54A0FF" },
   { id: "obsidian", name: "Obsidian Dark", icon: <Moon className="w-3.5 h-3.5" />, color: "#A8B1FF" },
   { id: "swiss", name: "Swiss Minimal", icon: <Sun className="w-3.5 h-3.5" />, color: "#FF0000" },
   { id: "terminal", name: "Cyber Terminal", icon: <Terminal className="w-3.5 h-3.5" />, color: "#00FF41" },

@@ -1,9 +1,16 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { content } from "@/data/content";
+import { useTheme } from "./ThemeProvider";
+import { SpiritMaskIcon } from "./SpiritMaskIcon";
 import { Github, Linkedin, Twitter, Mail, ArrowUpRight } from "lucide-react";
 
 export function Footer() {
+  const { theme } = useTheme();
+  const isBlueSpirit = theme === "bluespirit";
+
   return (
     <footer className="w-full border-t border-[var(--border)] bg-[var(--background)] py-12 transition-colors duration-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -14,6 +21,7 @@ export function Footer() {
               href="/"
               className="inline-flex items-center gap-2 font-mono text-base font-bold text-[var(--foreground)]"
             >
+              {isBlueSpirit && <SpiritMaskIcon className="w-5 h-5 text-[var(--accent)]" />}
               <span>{content.person.name}</span>
               <span className="text-xs px-2 py-0.5 rounded-full border border-[var(--border)] text-[var(--muted-foreground)]">
                 {content.person.focus}
@@ -26,6 +34,15 @@ export function Footer() {
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span>{content.person.status}</span>
             </div>
+
+            {isBlueSpirit && (
+              <div className="pt-2 flex items-center gap-2">
+                <span className="hanko-seal text-[9px] px-1.5 py-0.2">蒼鬼</span>
+                <span className="font-calligraphy text-xs text-[var(--accent)]">
+                  「研ぎ澄まされた刃のように、簡潔で堅牢なコードを」
+                </span>
+              </div>
+            )}
           </div>
 
           {/* Column 2: Navigation */}
@@ -39,7 +56,7 @@ export function Footer() {
                   href="/projects"
                   className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
                 >
-                  All Projects & Case Studies
+                  All Projects &amp; Case Studies
                 </Link>
               </li>
               <li>
@@ -47,7 +64,7 @@ export function Footer() {
                   href="/skills"
                   className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
                 >
-                  Technical Skills & Stack
+                  Technical Skills &amp; Stack
                 </Link>
               </li>
               <li>
@@ -55,7 +72,7 @@ export function Footer() {
                   href="/experience"
                   className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
                 >
-                  Experience & Timeline
+                  Experience &amp; Timeline
                 </Link>
               </li>
               <li>
@@ -63,7 +80,7 @@ export function Footer() {
                   href="/about"
                   className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
                 >
-                  About & Background
+                  About &amp; Background
                 </Link>
               </li>
               <li>
@@ -71,7 +88,7 @@ export function Footer() {
                   href="/achievements"
                   className="text-[var(--muted-foreground)] hover:text-[var(--foreground)] transition-colors"
                 >
-                  Hackathons & Certificates
+                  Hackathons &amp; Certificates
                 </Link>
               </li>
               <li>
@@ -128,7 +145,7 @@ export function Footer() {
         </div>
 
         <div className="pt-8 border-t border-[var(--border)] flex flex-col sm:flex-row items-center justify-between text-xs text-[var(--muted-foreground)] gap-4">
-          <p>© {new Date().getFullYear()} Shamil TP. Built with Next.js & TypeScript.</p>
+          <p>© {new Date().getFullYear()} Shamil TP. Built with Next.js &amp; TypeScript.</p>
           <div className="flex items-center gap-4 font-mono text-[11px]">
             <span>Kozhikode, Kerala, India</span>
             <span>•</span>

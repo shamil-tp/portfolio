@@ -19,9 +19,12 @@ import {
   Mail,
 } from "lucide-react";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { useTheme } from "@/components/ThemeProvider";
+import { BlueSpiritView } from "@/components/BlueSpiritView";
 
 export default function HomePage() {
   const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -29,6 +32,10 @@ export default function HomePage() {
 
   if (!mounted) {
     return <StaticHomePage />;
+  }
+
+  if (theme === "bluespirit") {
+    return <BlueSpiritView />;
   }
 
   return <AnimatedHomePage />;

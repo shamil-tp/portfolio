@@ -12,6 +12,29 @@
    ═══════════════════════════════════════════════════════════════════ */
 
 :root,
+[data-theme="bluespirit"] {
+  --background: #0c192c;
+  --foreground: #f5f2e9;
+  --muted: #07101d;
+  --muted-foreground: #a1a5aa;
+  --border: rgba(65, 75, 92, 0.45);
+  --accent: #54a0ff;
+  --accent-foreground: #050505;
+  --card: #07101d;
+  --card-foreground: #f5f2e9;
+  --card-border: rgba(65, 75, 92, 0.45);
+  --card-radius: 0.25rem;
+  --card-shadow: 0 8px 32px rgba(5, 10, 20, 0.6);
+  --badge-bg: rgba(84, 160, 255, 0.12);
+  --badge-text: #54a0ff;
+  --selection: #54a0ff;
+  --font-heading: "Shippori Mincho", "Yuji Syuku", "Cormorant Garamond", Georgia, serif;
+  --font-body: "Noto Sans JP", "Inter", -apple-system, sans-serif;
+  --font-calligraphy: "Yuji Syuku", "Shippori Mincho", cursive, serif;
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-mono-tech: "Space Mono", monospace;
+}
+
 [data-theme="obsidian"] {
   --background: #000000;
   --foreground: #ffffff;
@@ -681,4 +704,89 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="brutalist"] ::-webkit-scrollbar-thumb {
   border-radius: 6px !important;
   border: 2px solid #000000;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   JAPANESE DARK FANTASY & BLUE SPIRIT UTILITIES
+   Vertical typography, calligraphy brush styles, Hanko seals & ink mist
+   ═══════════════════════════════════════════════════════════════════ */
+
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.18em;
+}
+
+.writing-vertical-sideways {
+  writing-mode: vertical-rl;
+  letter-spacing: 0.15em;
+}
+
+.font-calligraphy {
+  font-family: var(--font-calligraphy, "Yuji Syuku", "Shippori Mincho", serif);
+}
+
+.font-editorial {
+  font-family: var(--font-editorial, "Cormorant Garamond", Georgia, serif);
+}
+
+.font-tech {
+  font-family: var(--font-mono-tech, "Space Mono", monospace);
+}
+
+.hanko-seal {
+  border: 1.5px solid #e74c3c;
+  color: #e74c3c;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Yuji Syuku", serif;
+  box-shadow: inset 0 0 4px rgba(231, 76, 60, 0.3), 0 0 6px rgba(231, 76, 60, 0.2);
+  user-select: none;
+}
+
+.blue-spirit-glow {
+  box-shadow: 0 0 35px rgba(84, 160, 255, 0.2), 0 0 80px rgba(12, 37, 53, 0.6);
+}
+
+.katana-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(84, 160, 255, 0.6) 50%, transparent 100%);
+}
+
+.ink-vignette {
+  background: radial-gradient(circle at 50% 40%, rgba(12, 37, 53, 0.2) 0%, rgba(7, 16, 29, 0.85) 75%, #05070a 100%);
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.8deg);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+@keyframes ink-drift {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translateY(-30px) translateX(15px) scale(1.1);
+    opacity: 0.45;
+  }
+  100% {
+    transform: translateY(-60px) translateX(-10px) scale(0.95);
+    opacity: 0;
+  }
+}
+
+.animate-ink-drift {
+  animation: ink-drift 12s linear infinite;
 }

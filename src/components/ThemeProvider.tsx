@@ -23,8 +23,8 @@ interface ThemeContextType {
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-  theme: "obsidian",
-  palette: THEME_CONFIGS.obsidian.palettes[0],
+  theme: "bluespirit",
+  palette: THEME_CONFIGS.bluespirit.palettes[0],
   layout: "standard",
   setTheme: () => {},
   setPalette: () => {},
@@ -33,12 +33,12 @@ const ThemeContext = createContext<ThemeContextType>({
   randomShift: () => {},
 });
 
-const THEMES: Theme[] = ["obsidian", "swiss", "terminal", "brutalist", "warm"];
+const THEMES: Theme[] = ["bluespirit", "obsidian", "swiss", "terminal", "brutalist", "warm"];
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("obsidian");
+  const [theme, setThemeState] = useState<Theme>("bluespirit");
   const [palette, setPaletteState] = useState<PalettePreset>(
-    THEME_CONFIGS.obsidian.palettes[0]
+    THEME_CONFIGS.bluespirit.palettes[0]
   );
   const [layout, setLayoutState] = useState<LayoutMode>("standard");
   const [mounted, setMounted] = useState(false);
@@ -105,8 +105,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setMounted(true);
 
-    const savedTheme = (localStorage.getItem("portfolio-theme") as Theme | null) || "obsidian";
-    const validTheme = THEMES.includes(savedTheme) ? savedTheme : "obsidian";
+    const savedTheme = (localStorage.getItem("portfolio-theme") as Theme | null) || "bluespirit";
+    const validTheme = THEMES.includes(savedTheme) ? savedTheme : "bluespirit";
 
     // Detect if this visit is a page reload / refresh
     let isReload = false;
