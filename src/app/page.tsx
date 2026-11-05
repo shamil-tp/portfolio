@@ -21,12 +21,12 @@ export default function HomePage() {
   const featuredProjects = content.projects.filter((p) => p.featured);
 
   return (
-    <div className="space-y-24 py-12 md:py-20">
+    <div className="portfolio-page space-y-24 py-12 md:py-20">
       {/* ════════════════ HERO SECTION ════════════════ */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex flex-col-reverse md:flex-row items-start md:items-center justify-between gap-12">
+      <section className="hero-section max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="hero-layout flex flex-col-reverse md:flex-row items-start md:items-center justify-between gap-12">
           {/* Left content */}
-          <div className="flex-1 space-y-6">
+          <div className="hero-content flex-1 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--border)] bg-[var(--card)] text-xs font-mono">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
               <span className="text-[var(--foreground)]">{content.person.status}</span>
@@ -181,7 +181,7 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="projects-grid grid grid-cols-1 md:grid-cols-2 gap-6">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}

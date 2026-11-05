@@ -5,9 +5,9 @@
 /* ═══════════════════════════════════════════════════════════════════
    THEME DEFINITIONS: 5 DISTINCT ART-DIRECTED EXPERIENCES
    1. Obsidian Dark    (Ultra-deep black #000000, deep charcoal #0C0C0C, pure white text, 1px subtle borders, ZERO drop shadows)
-   2. Swiss Minimal    (Stark monochrome, pure red accent #FF0000, 0px radius, flat, oversized tight headings 0.98, zero shadows/gradients)
+   2. Swiss Minimal    (Stark monochrome, pure red accent #D0211A, 0px radius, flat, oversized tight headings 0.98, zero shadows/gradients)
    3. Cyber Terminal   (Monospace, pitch black #000000, phosphor green #00FF41, raw engineering tool, 0px radius, inverted active states)
-   4. Neo Brutalist    (Pale cream #F4F4F0, thick 3px black borders, hard offset 6px shadows, electric yellow #FAFF00, bold chunky scales)
+   4. Neo Brutalist    (Pale cream #F4F4F0, thick 3px black borders, ROUNDED 16px corners, hard offset 6px shadows, electric accents)
    5. Warm Editorial   (Oatmeal/ivory #FDFBF7, warm charcoal #2D2D2A, classic serif headings, tall 1.75 line-height, delicate hairline dividers)
    ═══════════════════════════════════════════════════════════════════ */
 
@@ -36,9 +36,9 @@
   --background: #ffffff;
   --foreground: #000000;
   --muted: #f4f4f4;
-  --muted-foreground: #222222;
+  --muted-foreground: #333333;
   --border: #000000;
-  --accent: #ff0000;
+  --accent: #d0211a;
   --accent-foreground: #ffffff;
   --card: #ffffff;
   --card-foreground: #000000;
@@ -47,7 +47,7 @@
   --card-shadow: none;
   --badge-bg: #f4f4f4;
   --badge-text: #000000;
-  --selection: #ff0000;
+  --selection: #d0211a;
   --font-heading: "Helvetica Neue", Helvetica, "Neue Haas Grotesk", Arial, sans-serif;
   --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -83,7 +83,7 @@
   --card: #ffffff;
   --card-foreground: #000000;
   --card-border: #000000;
-  --card-radius: 0px;
+  --card-radius: 1rem;
   --card-shadow: 6px 6px 0px #000000;
   --badge-bg: #faff00;
   --badge-text: #000000;
@@ -96,13 +96,13 @@
   --background: #fdfbf7;
   --foreground: #2d2d2a;
   --muted: #f4efe6;
-  --muted-foreground: #6c685f;
+  --muted-foreground: #5a554c;
   --border: rgba(45, 45, 42, 0.15);
   --accent: #cc7a6b;
   --accent-foreground: #ffffff;
-  --card: #faf7f0;
+  --card: #faf6ee;
   --card-foreground: #2d2d2a;
-  --card-border: rgba(45, 45, 42, 0.12);
+  --card-border: rgba(45, 45, 42, 0.14);
   --card-radius: 0.5rem;
   --card-shadow: none;
   --badge-bg: #f2ede4;
@@ -133,36 +133,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 [data-theme="terminal"] ::selection {
-  background-color: #00ff41;
+  background-color: var(--accent);
   color: #000000;
 }
 
 [data-theme="brutalist"] ::selection {
-  background-color: #faff00;
+  background-color: var(--accent);
   color: #000000;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   1. OBSIDIAN DARK
-   Strict constraints:
-   - FORBIDDEN: Generic AI "dark mode" washed-out greys, purple/blue glowing orbs,
-     soft diffuse shadows, or playful rounded UI elements.
-   - Fonts: Extra-light (200) for large headers, Medium (500) body, Semi-bold (600) micro-copy. Tight tracking (-0.02em).
-   - Absolute zero drop shadows. Delineate depth entirely with 1px solid rgba(255,255,255,0.1) borders.
-   - Generous card padding (min 32px / 2rem). Stark 24px gutters.
+   1. OBSIDIAN DARK:
+   - Ultra-deep black #000000, deep charcoal #0C0C0C surface panels
+   - Pure white text, subtle metallic/monochromatic accent
+   - Absolute zero drop shadows. Depth delineated 100% via 1px solid borders
+   - Extra-light (200) large headers, 32px (2rem) generous card padding
    ═══════════════════════════════════════════════════════════════════ */
 [data-theme="obsidian"] {
-  background-color: #000000 !important;
+  background-color: var(--background) !important;
 }
 
 [data-theme="obsidian"] * {
-  box-shadow: none !important; /* Absolute zero drop shadows */
+  box-shadow: none !important; /* Zero drop shadows */
 }
 
 [data-theme="obsidian"] h1,
 [data-theme="obsidian"] h2 {
-  font-weight: 200 !important; /* Extra-light (200) for large headers */
-  letter-spacing: -0.02em !important; /* Tight tracking on headers */
+  font-weight: 200 !important; /* Extra-light (200) */
+  letter-spacing: -0.02em !important;
 }
 
 [data-theme="obsidian"] h3,
@@ -173,30 +171,38 @@ h1, h2, h3, h4, h5, h6 {
 
 [data-theme="obsidian"] p,
 [data-theme="obsidian"] li {
-  font-weight: 450 !important; /* Medium for body copy */
+  font-weight: 450 !important;
 }
 
 [data-theme="obsidian"] .font-mono,
-[data-theme="obsidian"] [class*="text-[10px]"],
-[data-theme="obsidian"] [class*="text-[11px]"],
+[data-theme="obsidian"] .card-kicker,
 [data-theme="obsidian"] [class*="text-xs"] {
-  font-weight: 600 !important; /* Semi-bold (600) for micro-copy */
+  font-weight: 600 !important; /* Semi-bold for micro-copy */
 }
 
+/* Obsidian Distinct Card Design */
+[data-theme="obsidian"] .portfolio-card,
 [data-theme="obsidian"] .rounded-2xl,
 [data-theme="obsidian"] .rounded-3xl,
 [data-theme="obsidian"] .rounded-xl {
-  border-radius: 0.5rem !important; /* Non-playful, sleek geometric radius */
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  background-color: #0c0c0c !important;
+  border-radius: 0.5rem !important; /* Sleek non-playful geometric radius */
+  border: 1px solid var(--card-border) !important;
+  background-color: var(--card) !important;
   padding: 2rem !important; /* Minimum 32px internal card padding */
 }
 
+[data-theme="obsidian"] .portfolio-card:hover,
 [data-theme="obsidian"] .rounded-2xl:hover,
-[data-theme="obsidian"] .rounded-3xl:hover,
-[data-theme="obsidian"] .rounded-xl:hover {
-  border-color: rgba(255, 255, 255, 0.25) !important;
+[data-theme="obsidian"] .rounded-3xl:hover {
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  transform: none !important;
   box-shadow: none !important;
+}
+
+[data-theme="obsidian"] .card-tag {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--muted-foreground) !important;
 }
 
 [data-theme="obsidian"] header {
@@ -208,23 +214,21 @@ h1, h2, h3, h4, h5, h6 {
 
 [data-theme="obsidian"] h1 span.bg-clip-text {
   background: none !important;
-  -webkit-text-fill-color: #ffffff !important;
-  color: #ffffff !important;
+  -webkit-text-fill-color: var(--foreground) !important;
+  color: var(--foreground) !important;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   2. SWISS MINIMAL
-   Strict constraints:
-   - FORBIDDEN: Any form of drop shadow, gradient, rounded corners,
-     illustrations, or decorative UI elements.
-   - 0px border-radius globally, flat, thin 1px solid black lines as dividers.
-   - Oversized brutal headings with tight line-height (0.9 to 1.05), crisp 14px body copy.
-   - Loose tracking for uppercase sub-labels. Single pure red (#FF0000) accent.
+   2. SWISS MINIMAL:
+   - 0px border-radius globally, flat, zero shadows, zero gradients
+   - Pure white/near-white paper, pure black ink, single stark signal accent
+   - Oversized brutal headings with tight line-height (0.95 to 1.02)
+   - Loose tracking for uppercase sublabels (0.18em), crisp 14px body copy
    ═══════════════════════════════════════════════════════════════════ */
 [data-theme="swiss"] * {
-  border-radius: 0px !important; /* border-radius: 0px globally */
+  border-radius: 0px !important; /* 0px globally */
   box-shadow: none !important; /* zero drop shadows */
-  background-image: none !important; /* no gradients */
+  background-image: none !important; /* zero gradients */
 }
 
 [data-theme="swiss"] h1,
@@ -233,8 +237,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, "Neue Haas Grotesk", Arial, sans-serif !important;
   font-weight: 900 !important;
   letter-spacing: -0.04em !important;
-  line-height: 0.98 !important; /* Uncomfortably tight line-height */
-  color: #000000 !important;
+  line-height: 0.98 !important; /* Tight uncomfortably brutal heading line-height */
+  color: var(--foreground) !important;
 }
 
 [data-theme="swiss"] h1 {
@@ -245,45 +249,54 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="swiss"] li {
   font-size: 14px !important;
   line-height: 1.5 !important;
-  color: #000000 !important;
+  color: var(--foreground) !important;
 }
 
+[data-theme="swiss"] .card-kicker,
 [data-theme="swiss"] [class*="tracking-wider"],
 [data-theme="swiss"] .font-mono {
-  letter-spacing: 0.18em !important;
+  letter-spacing: 0.2em !important;
   text-transform: uppercase !important;
-  font-weight: 700 !important;
+  font-weight: 800 !important;
 }
 
+/* Swiss Distinct Card Design */
+[data-theme="swiss"] .portfolio-card,
 [data-theme="swiss"] .rounded-2xl,
 [data-theme="swiss"] .rounded-3xl,
 [data-theme="swiss"] .rounded-xl,
 [data-theme="swiss"] .rounded-lg,
 [data-theme="swiss"] .rounded-full {
-  border: 1px solid #000000 !important;
-  background-color: #ffffff !important;
+  border: 1px solid var(--border) !important;
+  background-color: var(--card) !important;
   border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+[data-theme="swiss"] .portfolio-card:hover {
+  border-color: var(--accent) !important;
+  transform: none !important;
 }
 
 [data-theme="swiss"] h1 span.bg-clip-text {
   background: none !important;
-  -webkit-text-fill-color: #000000 !important;
-  color: #000000 !important;
+  -webkit-text-fill-color: var(--foreground) !important;
+  color: var(--foreground) !important;
 }
 
 [data-theme="swiss"] a[class*="bg-[var(--foreground)]"],
 [data-theme="swiss"] button[class*="bg-[var(--foreground)]"] {
-  background-color: #000000 !important;
-  color: #ffffff !important;
-  border: 1px solid #000000 !important;
+  background-color: var(--foreground) !important;
+  color: var(--background) !important;
+  border: 1px solid var(--foreground) !important;
   border-radius: 0px !important;
 }
 
 [data-theme="swiss"] a[class*="bg-[var(--foreground)]"]:hover,
 [data-theme="swiss"] button[class*="bg-[var(--foreground)]"]:hover {
-  background-color: #ff0000 !important;
-  color: #ffffff !important;
-  border-color: #ff0000 !important;
+  background-color: var(--accent) !important;
+  color: var(--accent-foreground) !important;
+  border-color: var(--accent) !important;
 }
 
 [data-theme="swiss"] hr,
@@ -291,29 +304,27 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="swiss"] .border-b,
 [data-theme="swiss"] header,
 [data-theme="swiss"] footer {
-  border-color: #000000 !important;
+  border-color: var(--border) !important;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   3. CYBER TERMINAL
-   Strict constraints:
-   - FORBIDDEN: Glowing sci-fi neon movie tropes, illegible "hacker" layouts,
-     rounded corners, or soft backgrounds. Raw engineering tool.
-   - Monospace everywhere (JetBrains Mono / Fira Code / Courier New).
-   - High information density (12-13px body, line-height 1.5, 4-12px padding).
-   - 0px border-radius, 1px solid #00FF41 borders.
-   - Active states: inverted solid block background (#00FF41) with #000000 text.
+   3. CYBER TERMINAL:
+   - Monospace everywhere (JetBrains Mono / Fira Code / Courier New)
+   - High information density (13px body, 1.5 line-height, 12px compact padding)
+   - 0px border-radius, 1px solid accent phosphor borders
+   - Inverted active states (solid block accent background with black text)
+   - Raw engineering tool without blurry glowing text tropes
    ═══════════════════════════════════════════════════════════════════ */
 [data-theme="terminal"] * {
   font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace !important;
   border-radius: 0px !important;
-  box-shadow: none !important; /* FORBIDDEN: glowing diffuse sci-fi shadows */
-  text-shadow: none !important; /* FORBIDDEN: glowing neon tropes */
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
 
 [data-theme="terminal"] {
-  background-color: #000000 !important;
-  color: #00ff41 !important;
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
 }
 
 [data-theme="terminal"] p,
@@ -324,13 +335,25 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5 !important;
 }
 
+/* Terminal Distinct Card Design */
+[data-theme="terminal"] .portfolio-card,
 [data-theme="terminal"] .rounded-2xl,
 [data-theme="terminal"] .rounded-3xl,
 [data-theme="terminal"] .rounded-xl,
 [data-theme="terminal"] .rounded-lg {
-  border: 1px solid #00ff41 !important;
-  background-color: #000000 !important;
+  border: 1px solid var(--accent) !important;
+  background-color: var(--card) !important;
   padding: 14px 18px !important;
+}
+
+[data-theme="terminal"] .portfolio-card:hover {
+  outline: 1px solid var(--accent) !important;
+  transform: none !important;
+}
+
+[data-theme="terminal"] .card-kicker::before {
+  content: "> [EXEC_STATUS: READY] " !important;
+  color: var(--muted-foreground);
 }
 
 [data-theme="terminal"] header,
@@ -338,76 +361,72 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="terminal"] .border,
 [data-theme="terminal"] .border-t,
 [data-theme="terminal"] .border-b {
-  border-color: #00ff41 !important;
+  border-color: var(--border) !important;
 }
 
-/* Active states: inverted solid block background (#00FF41) with #000000 text */
+/* Active states: inverted solid block background with black text */
 [data-theme="terminal"] a[class*="bg-[var(--foreground)]"],
 [data-theme="terminal"] button[class*="bg-[var(--foreground)]"] {
-  background-color: #00ff41 !important;
-  color: #000000 !important;
-  border: 1px solid #00ff41 !important;
+  background-color: var(--accent) !important;
+  color: var(--accent-foreground) !important;
+  border: 1px solid var(--accent) !important;
   font-weight: 700 !important;
 }
 
 [data-theme="terminal"] nav a:hover,
 [data-theme="terminal"] a:hover {
-  background-color: #00ff41 !important;
-  color: #000000 !important;
-}
-
-[data-theme="terminal"] .text-\[var\(--muted-foreground\)\],
-[data-theme="terminal"] [class*="text-muted-foreground"] {
-  color: #008f11 !important;
+  background-color: var(--accent) !important;
+  color: var(--accent-foreground) !important;
 }
 
 [data-theme="terminal"] h1 span.bg-clip-text {
   background: none !important;
-  -webkit-text-fill-color: #00ff41 !important;
-  color: #00ff41 !important;
+  -webkit-text-fill-color: var(--foreground) !important;
+  color: var(--foreground) !important;
 }
 
 [data-theme="terminal"] input,
 [data-theme="terminal"] textarea {
-  border: 1px solid #00ff41 !important;
-  background-color: #000000 !important;
-  color: #00ff41 !important;
-  caret-color: #00ff41 !important;
+  border: 1px solid var(--border) !important;
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+  caret-color: var(--accent) !important;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   4. NEO BRUTALIST
-   Strict constraints:
-   - FORBIDDEN: Soft drop shadows, gradients, rounded "SaaS" aesthetics,
-     floating elements, or centered generic layouts.
-   - Thick solid black borders (2px to 4px) on absolutely everything.
-   - Hard, unblurred offset drop shadows (6px 6px 0px #000000).
-   - Chunky oversized padding inside buttons, electric yellow (#FAFF00) accent.
-   - Bold, character-heavy typefaces pushed to uncomfortable scales.
+   4. NEO BRUTALIST (WITH BORDER RADIUS!):
+   - Pale cream background, pitch black text and thick 3px black borders
+   - ROUNDED CORNERS: 16px border-radius on cards, 12px on buttons/inputs
+   - Hard unblurred offset drop shadows (6px 6px 0px #000000)
+   - Chunky oversized padding, heavy bold fonts (Arial Black / Space Grotesk)
    ═══════════════════════════════════════════════════════════════════ */
 [data-theme="brutalist"] {
-  background-color: #f4f4f0 !important;
-  color: #000000 !important;
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
 }
 
 [data-theme="brutalist"] * {
   background-image: none !important; /* Zero gradients */
 }
 
+/* Neo Brutalist Distinct Card Design with BORDER RADIUS! */
+[data-theme="brutalist"] .portfolio-card,
 [data-theme="brutalist"] .rounded-2xl,
 [data-theme="brutalist"] .rounded-3xl,
 [data-theme="brutalist"] .rounded-xl {
+  border-radius: 1rem !important; /* 16px BORDER RADIUS! */
   border: 3px solid #000000 !important;
   box-shadow: 6px 6px 0px #000000 !important;
-  background-color: #ffffff !important;
-  border-radius: 0px !important;
+  background-color: var(--card) !important;
+  padding: 1.75rem !important;
 }
 
+[data-theme="brutalist"] .portfolio-card:hover,
 [data-theme="brutalist"] .rounded-2xl:hover,
 [data-theme="brutalist"] .rounded-3xl:hover,
 [data-theme="brutalist"] .rounded-xl:hover {
-  transform: translate(-2px, -2px) !important;
-  box-shadow: 8px 8px 0px #000000 !important;
+  transform: translate(-3px, -3px) !important;
+  box-shadow: 9px 9px 0px #000000 !important;
 }
 
 [data-theme="brutalist"] h1,
@@ -417,24 +436,25 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900 !important;
   letter-spacing: -0.03em !important;
   text-transform: uppercase !important;
-  color: #000000 !important;
+  color: var(--foreground) !important;
 }
 
 [data-theme="brutalist"] h1 span.bg-clip-text {
   background: none !important;
-  -webkit-text-fill-color: #000000 !important;
-  color: #000000 !important;
+  -webkit-text-fill-color: var(--foreground) !important;
+  color: var(--foreground) !important;
 }
 
+/* Chunky buttons with rounded corners and hard drop shadow */
 [data-theme="brutalist"] a[class*="bg-[var(--foreground)]"],
 [data-theme="brutalist"] button[class*="bg-[var(--foreground)]"] {
   border: 3px solid #000000 !important;
-  background-color: #faff00 !important;
-  color: #000000 !important;
+  background-color: var(--accent) !important;
+  color: var(--accent-foreground) !important;
   box-shadow: 5px 5px 0px #000000 !important;
   font-weight: 900 !important;
   padding: 12px 24px !important;
-  border-radius: 0px !important;
+  border-radius: 0.75rem !important; /* 12px BORDER RADIUS! */
   text-transform: uppercase !important;
 }
 
@@ -444,40 +464,51 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 7px 7px 0px #000000 !important;
 }
 
+/* Neo Brutalist Pills & Badges */
+[data-theme="brutalist"] .card-badge,
 [data-theme="brutalist"] .rounded-full {
-  border-radius: 100px !important;
+  border-radius: 9999px !important;
   border: 2px solid #000000 !important;
   box-shadow: 3px 3px 0px #000000 !important;
+  background-color: var(--accent) !important;
+  color: var(--accent-foreground) !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="brutalist"] .card-tag {
+  border: 2px solid #000000 !important;
+  border-radius: 6px !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+  font-weight: 700 !important;
+  background-color: var(--muted) !important;
 }
 
 [data-theme="brutalist"] input,
 [data-theme="brutalist"] textarea {
   border: 3px solid #000000 !important;
-  background-color: #ffffff !important;
+  background-color: var(--card) !important;
   box-shadow: 4px 4px 0px #000000 !important;
-  border-radius: 0px !important;
-  color: #000000 !important;
+  border-radius: 0.75rem !important; /* 12px BORDER RADIUS! */
+  color: var(--foreground) !important;
 }
 
 [data-theme="brutalist"] header,
 [data-theme="brutalist"] footer {
   border-color: #000000 !important;
-  border-width: 2px !important;
+  border-width: 3px !important;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   5. WARM EDITORIAL
-   Strict constraints:
-   - FORBIDDEN: Generic blue tech-bro color palettes, heavy shadows,
-     blocky web-buttons, or dense dashboards. High-end print lifestyle magazine.
-   - Classic serif headings (Playfair Display / Garamond / Georgia) + soft serif/sans body.
-   - Tactile but flat: ZERO drop shadows.
-   - Delicate hairline dividers (1px solid, 15% opacity).
-   - Tall line-heights (1.6 to 1.8), muted terracotta (#CC7A6B) accent.
+   5. WARM EDITORIAL:
+   - High-end print lifestyle magazine aesthetic on ivory/oatmeal paper
+   - Classic serif headings (Playfair Display / Georgia) + soft serif body (Lora)
+   - Tactile but completely flat: zero drop shadows
+   - Delicate hairline dividers (1px solid, 15% opacity)
+   - Tall line-heights (1.75), muted terracotta/oxblood accents
    ═══════════════════════════════════════════════════════════════════ */
 [data-theme="warm"] {
-  background-color: #fdfbf7 !important;
-  color: #2d2d2a !important;
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
 }
 
 [data-theme="warm"] * {
@@ -490,14 +521,48 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
   font-weight: 700 !important;
   letter-spacing: -0.015em !important;
-  color: #2d2d2a !important;
+  color: var(--foreground) !important;
 }
 
 [data-theme="warm"] p,
 [data-theme="warm"] li {
   font-family: "Lora", Georgia, -apple-system, BlinkMacSystemFont, serif !important;
-  line-height: 1.75 !important; /* Tall line-height for body text */
-  color: #2d2d2a !important;
+  line-height: 1.75 !important;
+  color: var(--foreground) !important;
+}
+
+/* Warm Editorial Distinct Card Design */
+[data-theme="warm"] .portfolio-card,
+[data-theme="warm"] .rounded-2xl,
+[data-theme="warm"] .rounded-3xl,
+[data-theme="warm"] .rounded-xl {
+  border: 1px solid var(--card-border) !important;
+  background-color: var(--card) !important;
+  border-radius: 0.5rem !important;
+  box-shadow: none !important;
+  padding: 2rem !important;
+}
+
+[data-theme="warm"] .portfolio-card:hover {
+  border-color: var(--accent) !important;
+  transform: none !important;
+}
+
+[data-theme="warm"] .card-kicker {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-style: italic !important;
+  color: var(--accent) !important;
+  text-transform: capitalize !important;
+  letter-spacing: normal !important;
+}
+
+[data-theme="warm"] a[class*="bg-[var(--foreground)]"],
+[data-theme="warm"] button[class*="bg-[var(--foreground)]"] {
+  background-color: var(--accent) !important;
+  color: var(--accent-foreground) !important;
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
 }
 
 [data-theme="warm"] hr,
@@ -506,42 +571,53 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="warm"] .border-b,
 [data-theme="warm"] header,
 [data-theme="warm"] footer {
-  border-color: rgba(45, 45, 42, 0.15) !important;
-}
-
-[data-theme="warm"] .rounded-2xl,
-[data-theme="warm"] .rounded-3xl,
-[data-theme="warm"] .rounded-xl {
-  border: 1px solid rgba(45, 45, 42, 0.14) !important;
-  background-color: #faf7f0 !important;
-  border-radius: 0.5rem !important;
-  box-shadow: none !important;
-}
-
-[data-theme="warm"] a[class*="bg-[var(--foreground)]"],
-[data-theme="warm"] button[class*="bg-[var(--foreground)]"] {
-  background-color: #cc7a6b !important;
-  color: #ffffff !important;
-  border: none !important;
-  border-radius: 6px !important;
-  box-shadow: none !important;
-}
-
-[data-theme="warm"] a[class*="bg-[var(--foreground)]"]:hover,
-[data-theme="warm"] button[class*="bg-[var(--foreground)]"]:hover {
-  background-color: #b8695b !important;
-  box-shadow: none !important;
-}
-
-[data-theme="warm"] [class*="tracking-wider"] {
-  font-style: italic !important;
-  color: #cc7a6b !important;
+  border-color: var(--border) !important;
 }
 
 [data-theme="warm"] h1 span.bg-clip-text {
   background: none !important;
-  -webkit-text-fill-color: #cc7a6b !important;
-  color: #cc7a6b !important;
+  -webkit-text-fill-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   LAYOUT SHIFT MODES:
+   1. Standard: Balanced modular bento grid
+   2. Asymmetric: Deliberate offset staggering & tension
+   3. Stacked: Expansive full-width catalog story rows
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* Asymmetric Shift */
+@media (min-width: 768px) {
+  [data-layout="asymmetric"] .projects-grid > article:nth-child(even) {
+    margin-top: 2.5rem !important;
+  }
+
+  [data-layout="asymmetric"] .hero-layout {
+    gap: 4rem !important;
+  }
+
+  [data-layout="asymmetric"] .hero-content {
+    padding-right: 2rem;
+  }
+}
+
+/* Stacked Shift */
+[data-layout="stacked"] .projects-grid {
+  grid-template-columns: 1fr !important;
+}
+
+[data-layout="stacked"] .portfolio-card {
+  padding: 2.25rem 2.5rem !important;
+}
+
+[data-layout="stacked"] .hero-layout {
+  flex-direction: column-reverse !important;
+  align-items: flex-start !important;
+}
+
+[data-layout="stacked"] .hero-content h1 {
+  max-width: 900px;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
@@ -561,7 +637,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 [data-theme="terminal"] .perspective-1200 > div > div {
-  border: 1px solid #00ff41 !important;
+  border: 1px solid var(--accent) !important;
   box-shadow: none !important;
   border-radius: 0px !important;
 }
@@ -569,11 +645,11 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="brutalist"] .perspective-1200 > div > div {
   border: 3px solid #000000 !important;
   box-shadow: 6px 6px 0px #000000 !important;
-  border-radius: 0px !important;
+  border-radius: 1rem !important; /* 16px BORDER RADIUS! */
 }
 
 [data-theme="warm"] .perspective-1200 > div > div {
-  border: 1px solid rgba(45, 45, 42, 0.15) !important;
+  border: 1px solid var(--border) !important;
   box-shadow: none !important;
   border-radius: 0.5rem !important;
 }
@@ -598,7 +674,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 [data-theme="swiss"] ::-webkit-scrollbar-thumb,
-[data-theme="terminal"] ::-webkit-scrollbar-thumb,
-[data-theme="brutalist"] ::-webkit-scrollbar-thumb {
+[data-theme="terminal"] ::-webkit-scrollbar-thumb {
   border-radius: 0px !important;
+}
+
+[data-theme="brutalist"] ::-webkit-scrollbar-thumb {
+  border-radius: 6px !important;
+  border: 2px solid #000000;
 }
