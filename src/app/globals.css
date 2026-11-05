@@ -2,93 +2,129 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ═══════════════════════════════════════════════════════════════════
+   THEME DEFINITIONS: 5 DISTINCT ART-DIRECTED EXPERIENCES
+   1. Obsidian Dark    (Ultra-deep, glassmorphic, electric blue glows)
+   2. Swiss Minimal    (Stark monochrome, pure red accent, 0px radius, flat)
+   3. Cyber Terminal   (Monospace, pitch black, neon green, CRT scanlines)
+   4. Neo Brutalist    (Cream bg, thick 3px black borders, 6px-8px hard shadows)
+   5. Warm Editorial   (Ivory/oatmeal, warm charcoal, serif headings, hairline)
+   ═══════════════════════════════════════════════════════════════════ */
+
 :root,
 [data-theme="obsidian"] {
-  --background: #090a0f;
-  --foreground: #f3f4f6;
-  --muted: #131722;
+  --background: #0b0b0f;
+  --foreground: #ffffff;
+  --muted: #14141e;
   --muted-foreground: #9ca3af;
-  --border: #222738;
+  --border: rgba(255, 255, 255, 0.08);
   --accent: #3b82f6;
   --accent-foreground: #ffffff;
-  --card: #111420;
+  --card: #1a1a24;
   --card-foreground: #f9fafb;
-  --card-border: #1e2438;
-  --badge-bg: #1e293b;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --card-radius: 1.5rem;
+  --card-shadow: 0 14px 40px -10px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(59, 130, 246, 0.12);
+  --badge-bg: rgba(59, 130, 246, 0.12);
   --badge-text: #93c5fd;
   --selection: #3b82f6;
+  --font-heading: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Text", sans-serif;
 }
 
 [data-theme="swiss"] {
-  --background: #fbfbfb;
-  --foreground: #111111;
-  --muted: #f0f0f0;
-  --muted-foreground: #666666;
-  --border: #e0e0e0;
-  --accent: #e53e3e;
+  --background: #ffffff;
+  --foreground: #000000;
+  --muted: #f4f4f4;
+  --muted-foreground: #444444;
+  --border: #000000;
+  --accent: #ff0000;
   --accent-foreground: #ffffff;
   --card: #ffffff;
-  --card-foreground: #111111;
-  --card-border: #eaeaea;
-  --badge-bg: #fee2e2;
-  --badge-text: #b91c1c;
-  --selection: #e53e3e;
+  --card-foreground: #000000;
+  --card-border: #000000;
+  --card-radius: 0px;
+  --card-shadow: none;
+  --badge-bg: #f4f4f4;
+  --badge-text: #000000;
+  --selection: #ff0000;
+  --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 [data-theme="terminal"] {
-  --background: #050d08;
-  --foreground: #22c55e;
-  --muted: #0b1a0f;
-  --muted-foreground: #15803d;
-  --border: #14532d;
-  --accent: #4ade80;
-  --accent-foreground: #022c22;
-  --card: #08140c;
-  --card-foreground: #86efac;
-  --card-border: #166534;
-  --badge-bg: #14532d;
-  --badge-text: #86efac;
-  --selection: #22c55e;
+  --background: #000000;
+  --foreground: #00ff41;
+  --muted: #021406;
+  --muted-foreground: #008f11;
+  --border: #00ff41;
+  --accent: #00ff41;
+  --accent-foreground: #000000;
+  --card: #020b04;
+  --card-foreground: #00ff41;
+  --card-border: #00ff41;
+  --card-radius: 0px;
+  --card-shadow: 0 0 15px rgba(0, 255, 65, 0.15);
+  --badge-bg: #03210a;
+  --badge-text: #00ff41;
+  --selection: #00ff41;
+  --font-heading: "Courier New", Courier, "JetBrains Mono", monospace;
+  --font-body: "Courier New", Courier, "JetBrains Mono", monospace;
 }
 
 [data-theme="brutalist"] {
-  --background: #fdfbf7;
+  --background: #fffdf8;
   --foreground: #000000;
-  --muted: #f4efe6;
-  --muted-foreground: #333333;
+  --muted: #f5eedf;
+  --muted-foreground: #222222;
   --border: #000000;
-  --accent: #fbbf24;
+  --accent: #ffe600;
   --accent-foreground: #000000;
   --card: #ffffff;
   --card-foreground: #000000;
   --card-border: #000000;
-  --badge-bg: #ffedd5;
+  --card-radius: 0px;
+  --card-shadow: 6px 6px 0px #000000;
+  --badge-bg: #ffe600;
   --badge-text: #000000;
-  --selection: #fbbf24;
+  --selection: #ffe600;
+  --font-heading: "Arial Black", "Space Grotesk", Arial, sans-serif;
+  --font-body: Arial, "Space Grotesk", sans-serif;
 }
 
 [data-theme="warm"] {
-  --background: #f7f4ed;
-  --foreground: #2d2a26;
-  --muted: #ece6da;
-  --muted-foreground: #706b63;
-  --border: #dfd8cb;
-  --accent: #c2410c;
+  --background: #fdfbf7;
+  --foreground: #2d2d2a;
+  --muted: #f4efe6;
+  --muted-foreground: #6e6a63;
+  --border: rgba(45, 45, 42, 0.14);
+  --accent: #c85a32;
   --accent-foreground: #ffffff;
   --card: #ffffff;
-  --card-foreground: #2d2a26;
-  --card-border: #e2dbce;
-  --badge-bg: #ffedd5;
-  --badge-text: #9a3412;
-  --selection: #c2410c;
+  --card-foreground: #2d2d2a;
+  --card-border: rgba(45, 45, 42, 0.12);
+  --card-radius: 1rem;
+  --card-shadow: 0 4px 24px -4px rgba(45, 45, 42, 0.06);
+  --badge-bg: #f5eedf;
+  --badge-text: #c85a32;
+  --selection: #c85a32;
+  --font-heading: Georgia, "Playfair Display", "Times New Roman", serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Lora", Georgia, serif;
 }
 
+/* Base Body Application */
 body {
   background-color: var(--background);
   color: var(--foreground);
+  font-family: var(--font-body);
   font-feature-settings: "rlig" 1, "calt" 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
 
 ::selection {
@@ -96,7 +132,160 @@ body {
   color: #ffffff;
 }
 
-/* Custom scrollbar */
+[data-theme="terminal"] ::selection {
+  background-color: #00ff41;
+  color: #000000;
+}
+
+[data-theme="brutalist"] ::selection {
+  background-color: #ffe600;
+  color: #000000;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   THEME-SPECIFIC ART DIRECTION RULES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* 1. OBSIDIAN DARK: Glassmorphism, floating cards with glowing drop shadows */
+[data-theme="obsidian"] .rounded-2xl,
+[data-theme="obsidian"] .rounded-3xl {
+  background-color: rgba(26, 26, 36, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 40px -10px rgba(0, 0, 0, 0.6), 0 0 20px -5px rgba(59, 130, 246, 0.1);
+}
+
+[data-theme="obsidian"] .rounded-2xl:hover,
+[data-theme="obsidian"] .rounded-3xl:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.8), 0 0 30px -5px rgba(59, 130, 246, 0.25);
+}
+
+/* 2. SWISS MINIMAL: Completely flat, 0px radius, zero shadows, pure red accent */
+[data-theme="swiss"] * {
+  border-radius: 0px !important;
+  box-shadow: none !important;
+}
+
+[data-theme="swiss"] h1,
+[data-theme="swiss"] h2,
+[data-theme="swiss"] h3 {
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+[data-theme="swiss"] .rounded-2xl,
+[data-theme="swiss"] .rounded-3xl,
+[data-theme="swiss"] .rounded-xl {
+  border-width: 1px;
+  border-color: #000000;
+  background-color: #ffffff;
+}
+
+[data-theme="swiss"] [class*="tracking-wider"] {
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  font-weight: 700 !important;
+}
+
+/* 3. CYBER TERMINAL: Pure monospace, 0px radius, CRT glow, neon green */
+[data-theme="terminal"] * {
+  font-family: "Courier New", Courier, "JetBrains Mono", ui-monospace, monospace !important;
+  border-radius: 0px !important;
+}
+
+[data-theme="terminal"] h1,
+[data-theme="terminal"] h2,
+[data-theme="terminal"] h3,
+[data-theme="terminal"] h4,
+[data-theme="terminal"] .font-bold {
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.45);
+}
+
+[data-theme="terminal"] .rounded-2xl,
+[data-theme="terminal"] .rounded-3xl,
+[data-theme="terminal"] .rounded-xl,
+[data-theme="terminal"] .rounded-lg {
+  border: 1px solid #00ff41 !important;
+  background-color: #010803 !important;
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.12) !important;
+}
+
+[data-theme="terminal"] input,
+[data-theme="terminal"] textarea {
+  border: 1px solid #00ff41 !important;
+  background-color: #000000 !important;
+  color: #00ff41 !important;
+  caret-color: #00ff41 !important;
+}
+
+/* 4. NEO BRUTALIST: Thick 3px black borders, hard offset 6px-8px shadows, electric yellow */
+[data-theme="brutalist"] * {
+  border-radius: 0px !important;
+}
+
+[data-theme="brutalist"] .rounded-2xl,
+[data-theme="brutalist"] .rounded-3xl,
+[data-theme="brutalist"] .rounded-xl {
+  border: 3px solid #000000 !important;
+  box-shadow: 6px 6px 0px #000000 !important;
+  background-color: #ffffff !important;
+}
+
+[data-theme="brutalist"] .rounded-2xl:hover,
+[data-theme="brutalist"] .rounded-3xl:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 9px 9px 0px #000000 !important;
+}
+
+[data-theme="brutalist"] a[class*="bg-[var(--foreground)]"],
+[data-theme="brutalist"] button[class*="bg-[var(--foreground)]"],
+[data-theme="brutalist"] .submit-button {
+  border: 2px solid #000000 !important;
+  background-color: #ffe600 !important;
+  color: #000000 !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+  font-weight: 800 !important;
+}
+
+[data-theme="brutalist"] a[class*="bg-[var(--foreground)]"]:hover,
+[data-theme="brutalist"] button[class*="bg-[var(--foreground)]"]:hover,
+[data-theme="brutalist"] .submit-button:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 6px 6px 0px #000000 !important;
+}
+
+[data-theme="brutalist"] input,
+[data-theme="brutalist"] textarea {
+  border: 3px solid #000000 !important;
+  background-color: #ffffff !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+}
+
+/* 5. WARM EDITORIAL: Classic serif headings, tall line-height (1.7), hairline borders */
+[data-theme="warm"] h1,
+[data-theme="warm"] h2,
+[data-theme="warm"] h3 {
+  font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+[data-theme="warm"] p,
+[data-theme="warm"] li {
+  line-height: 1.7;
+}
+
+[data-theme="warm"] .rounded-2xl,
+[data-theme="warm"] .rounded-3xl {
+  border: 1px solid rgba(45, 45, 42, 0.12);
+  background-color: #ffffff;
+  box-shadow: 0 4px 24px -4px rgba(45, 45, 42, 0.05);
+}
+
+/* Custom scrollbars */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -115,17 +304,8 @@ body {
   background: var(--muted-foreground);
 }
 
-/* Brutalist card shadows when active */
-[data-theme="brutalist"] .brutalist-shadow {
-  box-shadow: 4px 4px 0px #000000;
-}
-
-[data-theme="brutalist"] .brutalist-button {
-  box-shadow: 3px 3px 0px #000000;
-  border: 2px solid #000000;
-}
-
-[data-theme="brutalist"] .brutalist-button:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 5px 5px 0px #000000;
+[data-theme="swiss"] ::-webkit-scrollbar-thumb,
+[data-theme="terminal"] ::-webkit-scrollbar-thumb,
+[data-theme="brutalist"] ::-webkit-scrollbar-thumb {
+  border-radius: 0px !important;
 }

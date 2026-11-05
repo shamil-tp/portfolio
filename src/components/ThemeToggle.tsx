@@ -5,11 +5,11 @@ import { useTheme, Theme } from "./ThemeProvider";
 import { Palette, Sparkles, Terminal, Square, Sun, Moon } from "lucide-react";
 
 const THEME_OPTIONS: { id: Theme; name: string; icon: React.ReactNode; color: string }[] = [
-  { id: "obsidian", name: "Obsidian Dark", icon: <Moon className="w-3.5 h-3.5" />, color: "#3b82f6" },
-  { id: "swiss", name: "Swiss Minimal", icon: <Sun className="w-3.5 h-3.5" />, color: "#e53e3e" },
-  { id: "terminal", name: "Cyber Terminal", icon: <Terminal className="w-3.5 h-3.5" />, color: "#22c55e" },
-  { id: "brutalist", name: "Neo Brutalist", icon: <Square className="w-3.5 h-3.5" />, color: "#fbbf24" },
-  { id: "warm", name: "Warm Editorial", icon: <Sparkles className="w-3.5 h-3.5" />, color: "#c2410c" },
+  { id: "obsidian", name: "Obsidian Dark", icon: <Moon className="w-3.5 h-3.5" />, color: "#3B82F6" },
+  { id: "swiss", name: "Swiss Minimal", icon: <Sun className="w-3.5 h-3.5" />, color: "#FF0000" },
+  { id: "terminal", name: "Cyber Terminal", icon: <Terminal className="w-3.5 h-3.5" />, color: "#00FF41" },
+  { id: "brutalist", name: "Neo Brutalist", icon: <Square className="w-3.5 h-3.5" />, color: "#FFE600" },
+  { id: "warm", name: "Warm Editorial", icon: <Sparkles className="w-3.5 h-3.5" />, color: "#C85A32" },
 ];
 
 export function ThemeToggle() {
