@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { SkillsGrid } from "@/components/SkillsGrid";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { AchievementsSection } from "@/components/AchievementsSection";
-import { ContactForm } from "@/components/ContactForm";
+import { FlippableCard } from "@/components/FlippableCard";
 import {
   ArrowRight,
   Server,
@@ -266,19 +266,19 @@ export default function HomePage() {
         <AchievementsSection />
       </section>
 
-      {/* ════════════════ CONTACT SECTION WITH CLOUDFLARE D1 FORM ════════════════ */}
+      {/* ════════════════ 3D FLIPPABLE BENTO IDENTITY CARD ════════════════ */}
       <section id="contact" className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-[var(--accent)] mb-1">
               <Mail className="w-3.5 h-3.5" />
-              <span>Direct Inquiries</span>
+              <span>Direct Inquiries &amp; Identity</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold text-[var(--foreground)]">
-              Contact &amp; Collaboration
+              Let&apos;s Build Together
             </h2>
             <p className="text-sm text-[var(--muted-foreground)] mt-1">
-              Send a direct message via Cloudflare Workers &amp; Hono to D1 database.
+              Hover and click or tap the card to flip between front identity and back coordinates.
             </p>
           </div>
 
@@ -286,12 +286,13 @@ export default function HomePage() {
             href="/contact"
             className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-[var(--foreground)] hover:text-[var(--accent)] transition-colors self-start sm:self-auto"
           >
-            <span>Full contact page</span>
+            <span>Direct message portal</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
 
-        <ContactForm />
+        {/* 3D Flippable Card Component */}
+        <FlippableCard />
       </section>
     </div>
   );

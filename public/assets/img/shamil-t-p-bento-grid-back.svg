@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" width="700" height="420">
+        <rect x="0" y="0" width="700" height="420" rx="28" fill="#003999" />
+        <rect x="24" y="24" width="404" height="282" rx="18" fill="none" stroke="#c6e1f2" stroke-width="2.4" />
+        <circle cx="382" cy="44" r="2.8" fill="#c6e1f2" />
+        <circle cx="393" cy="44" r="2.8" fill="#c6e1f2" />
+        <circle cx="404" cy="44" r="2.8" fill="#c6e1f2" />
+        <text x="48" y="96" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="800" font-size="48" letter-spacing="-1" fill="#c6e1f2">Shamil</text>
+        <text x="48" y="150" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="800" font-size="48" letter-spacing="-1" fill="#c6e1f2">T P</text>
+        <text x="48" y="182" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="500" font-size="14" fill="#c6e1f2" opacity="0.82">Crafting scalable web systems</text>
+        <text x="374" y="241" text-anchor="end" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="500" font-size="15.5" fill="#c6e1f2">shamiltp073@gmail.com</text>
+        <g transform="translate(384, 227)"><rect x="0" y="0" width="22" height="16" rx="2.5" fill="#c6e1f2" /><polyline points="1.5,2 11,9.5 20.5,2" fill="none" stroke="#003999" stroke-width="1.8" /></g>
+        <text x="374" y="278" text-anchor="end" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="500" font-size="15.5" fill="#c6e1f2">shamiltp.life</text>
+        <g transform="translate(395, 272)"><circle cx="0" cy="0" r="10.5" fill="none" stroke="#c6e1f2" stroke-width="1.8" /><ellipse cx="0" cy="0" rx="5" ry="10.5" fill="none" stroke="#c6e1f2" stroke-width="1.5" /><line x1="-10" y1="0" x2="10" y2="0" stroke="#c6e1f2" stroke-width="1.4" /></g>
+        <rect x="442" y="24" width="218" height="282" rx="18" fill="none" stroke="#c6e1f2" stroke-width="2.4" />
+        <polyline points="668,145 676,153 668,161" fill="none" stroke="#c6e1f2" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+        <text x="636" y="132" text-anchor="end" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="800" font-size="20" fill="#c6e1f2">Full-Stack</text><text x="636" y="158" text-anchor="end" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="800" font-size="20" fill="#c6e1f2">Architect</text>
+        <text x="636" y="262" text-anchor="end" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="800" font-size="22" fill="#c6e1f2">MCA STUDENT</text>
+        <rect x="24" y="320" width="652" height="76" rx="18" fill="none" stroke="#c6e1f2" stroke-width="2.4" />
+        <g opacity="0.86"><text x="44" y="349" font-family="JetBrains Mono, monospace" font-weight="600" font-size="11.5" fill="#c6e1f2">GH: github.com/shamil-tp</text><text x="44" y="378" font-family="JetBrains Mono, monospace" font-weight="600" font-size="11.5" fill="#c6e1f2">IN: in/shamil-tp</text></g>
+        <text x="626" y="349" text-anchor="end" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="500" font-size="16" fill="#c6e1f2">79027-86927</text>
+        <circle cx="646" cy="343" r="8" fill="#c6e1f2" />
+        <text x="626" y="379" text-anchor="end" font-family="Plus Jakarta Sans, Inter, sans-serif" font-weight="500" font-size="15" fill="#c6e1f2">Thottungal | Thalekkara | Kondotty</text>
+        <circle cx="646" cy="373" r="8" fill="none" stroke="#c6e1f2" stroke-width="2" />
+      </svg>
