@@ -38,9 +38,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${project.name} — Architecture & Case Study | Shamil TP`,
     description: project.summary,
+    alternates: {
+      canonical: `https://shamiltp.life/projects/${project.slug}`,
+    },
     openGraph: {
       title: `${project.name} | Shamil TP`,
       description: project.summary,
+      url: `https://shamiltp.life/projects/${project.slug}`,
+      images: [
+        {
+          url: `/assets/og/${project.slug}.png`,
+          width: 1200,
+          height: 630,
+          alt: project.name,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.name} | Shamil TP`,
+      description: project.summary,
+      images: [`/assets/og/${project.slug}.png`],
     },
   };
 }

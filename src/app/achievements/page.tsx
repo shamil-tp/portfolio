@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "Achievements & Certificates | Shamil TP",
   description:
     "Shamil TP's hackathons and certificates: Layover 2026 (top 13, RegretMap), Gateways 2026 (top 37, OpsPilot), AI Unplugged 2026 and Beyond Us 2023.",
+  alternates: {
+    canonical: "https://shamiltp.life/achievements",
+  },
 };
 
 export default function AchievementsPage() {

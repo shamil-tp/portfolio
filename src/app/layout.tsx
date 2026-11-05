@@ -9,54 +9,89 @@ import { content } from "@/data/content";
 export const metadata: Metadata = {
   metadataBase: new URL("https://shamiltp.life"),
   title: {
-    default: `${content.person.name} — ${content.person.role} (${content.person.focus})`,
-    template: `%s | ${content.person.name}`,
+    default: "Shamil TP — Full Stack Developer | Backend & Distributed Systems",
+    template: "%s | Shamil TP",
   },
-  description: content.person.tagline,
+  description:
+    "Full Stack Developer & Backend Systems Engineer from Kerala, India. Specializing in high-throughput APIs, distributed systems, Linux home servers, and Next.js.",
   keywords: [
     "Shamil TP",
+    "shamil-tp",
+    "shamiltp.life",
+    "Shamil Developer",
     "Full Stack Developer",
-    "Backend Developer",
+    "Backend Developer Kerala",
+    "Next.js Developer",
     "FastAPI",
-    "Next.js",
-    "Go",
+    "Go Developer",
     "Node.js",
     "Docker",
-    "Kerala Developer",
+    "Devagiri College",
     "OpsPilot",
     "RegretMap",
     "Rewind",
-    "shamiltp.life",
+    "Software Engineer Portfolio",
   ],
   authors: [{ name: "Shamil TP", url: "https://shamiltp.life" }],
   creator: "Shamil TP",
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "https://shamiltp.life",
-    title: `${content.person.name} — ${content.person.role}`,
-    description: content.person.tagline,
+    title: "Shamil TP — Full Stack Developer | Backend & Systems Engineer",
+    description:
+      "Full Stack Developer & Backend Systems Engineer from Kerala, India. Specializing in high-throughput APIs, distributed systems, Linux home servers, and Next.js.",
     siteName: "Shamil TP Portfolio",
     images: [
       {
         url: "/assets/og/home.png",
         width: 1200,
         height: 630,
-        alt: "Shamil TP — Portfolio",
+        alt: "Shamil TP — Full Stack Developer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${content.person.name} — ${content.person.role}`,
-    description: content.person.tagline,
+    title: "Shamil TP — Full Stack Developer | Backend & Systems Engineer",
+    description:
+      "Full Stack Developer & Backend Systems Engineer from Kerala, India. Specializing in high-throughput APIs, distributed systems, Linux home servers, and Next.js.",
     creator: "@ShamilTp6",
     images: ["/assets/og/home.png"],
   },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.svg",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/android-chrome-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      {
+        rel: "android-chrome-192x192",
+        url: "/android-chrome-192x192.png",
+      },
+      {
+        rel: "android-chrome-512x512",
+        url: "/android-chrome-512x512.png",
+      },
+    ],
   },
   manifest: "/site.webmanifest",
   alternates: {
@@ -72,9 +107,27 @@ const jsonLd = {
       "@id": "https://shamiltp.life/#website",
       "url": "https://shamiltp.life",
       "name": "Shamil TP",
-      "description": content.person.tagline,
+      "alternateName": [
+        "Shamil TP Portfolio",
+        "shamiltp.life",
+        "The Blue Spirit"
+      ],
+      "description": "Full Stack Developer & Backend Systems Engineer Portfolio",
+      "inLanguage": "en-US",
       "publisher": {
         "@id": "https://shamiltp.life/#person",
+      },
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://shamiltp.life/#profilepage",
+      "url": "https://shamiltp.life",
+      "name": "Shamil TP — Full Stack Developer Profile",
+      "isPartOf": { "@id": "https://shamiltp.life/#website" },
+      "mainEntity": { "@id": "https://shamiltp.life/#person" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://shamiltp.life/myProfileImg.jpeg",
       },
     },
     {
@@ -83,22 +136,100 @@ const jsonLd = {
       "name": "Shamil TP",
       "alternateName": ["Shamil", "Shamil T P", "shamil-tp"],
       "url": "https://shamiltp.life",
+      "image": "https://shamiltp.life/myProfileImg.jpeg",
       "jobTitle": "Full Stack Developer",
-      "alumniOf": "Safi Institute of Advanced Study",
-      "affiliation": {
-        "@type": "CollegeOrUniversity",
-        "name": "St. Joseph's College (Autonomous), Devagiri",
-      },
+      "description":
+        "Full Stack Developer specializing in high-throughput backend services, distributed systems, Linux servers, and Next.js.",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "St. Joseph's College (Autonomous), Devagiri",
+          "url": "https://www.devagiricollege.org",
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Safi Institute of Advanced Study",
+        },
+      ],
+      "knowsAbout": [
+        "Full Stack Development",
+        "Backend Architecture",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "FastAPI",
+        "Python",
+        "Go",
+        "Node.js",
+        "Docker",
+        "Linux Ubuntu Server",
+        "Cloudflare Workers",
+        "PostgreSQL",
+        "Redis",
+        "WebSockets",
+        "MicroPython",
+        "REST APIs"
+      ],
       "sameAs": [
         "https://github.com/shamil-tp",
         "https://www.linkedin.com/in/shamil-tp/",
         "https://x.com/ShamilTp6",
+        "https://contact.shamiltp.life"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Direct engineering and development inquiries",
         "url": "https://contact.shamiltp.life",
+        "email": "shamiltp073@gmail.com",
       },
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://shamiltp.life/#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://shamiltp.life",
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://shamiltp.life/projects",
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Skills",
+          "item": "https://shamiltp.life/skills",
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Experience",
+          "item": "https://shamiltp.life/experience",
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "About",
+          "item": "https://shamiltp.life/about",
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Achievements",
+          "item": "https://shamiltp.life/achievements",
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Contact",
+          "item": "https://shamiltp.life/contact",
+        },
+      ],
     },
     {
       "@type": "ItemList",

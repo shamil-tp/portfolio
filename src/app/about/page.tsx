@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "About Shamil TP — Developer, MCA Student and Self-Hoster",
   description:
     "Shamil TP is a backend-focused full stack developer from Kerala, studying for an MCA at St. Joseph's College, Devagiri. Projects, home server and IoT work.",
+  alternates: {
+    canonical: "https://shamiltp.life/about",
+  },
 };
 
 const TECH_MATRIX = [
