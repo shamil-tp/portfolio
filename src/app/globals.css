@@ -4,39 +4,39 @@
 
 /* ═══════════════════════════════════════════════════════════════════
    THEME DEFINITIONS: 5 DISTINCT ART-DIRECTED EXPERIENCES
-   1. Obsidian Dark    (Ultra-deep, glassmorphic, electric blue glows)
-   2. Swiss Minimal    (Stark monochrome, pure red accent, 0px radius, flat)
-   3. Cyber Terminal   (Monospace, pitch black, neon green, CRT scanlines)
-   4. Neo Brutalist    (Cream bg, thick 3px black borders, 6px-8px hard shadows)
-   5. Warm Editorial   (Ivory/oatmeal, warm charcoal, serif headings, hairline)
+   1. Obsidian Dark    (Ultra-deep black #000000, deep charcoal #0C0C0C, pure white text, 1px subtle borders, ZERO drop shadows)
+   2. Swiss Minimal    (Stark monochrome, pure red accent #FF0000, 0px radius, flat, oversized tight headings 0.98, zero shadows/gradients)
+   3. Cyber Terminal   (Monospace, pitch black #000000, phosphor green #00FF41, raw engineering tool, 0px radius, inverted active states)
+   4. Neo Brutalist    (Pale cream #F4F4F0, thick 3px black borders, hard offset 6px shadows, electric yellow #FAFF00, bold chunky scales)
+   5. Warm Editorial   (Oatmeal/ivory #FDFBF7, warm charcoal #2D2D2A, classic serif headings, tall 1.75 line-height, delicate hairline dividers)
    ═══════════════════════════════════════════════════════════════════ */
 
 :root,
 [data-theme="obsidian"] {
-  --background: #0b0b0f;
+  --background: #000000;
   --foreground: #ffffff;
-  --muted: #14141e;
-  --muted-foreground: #9ca3af;
-  --border: rgba(255, 255, 255, 0.08);
-  --accent: #3b82f6;
-  --accent-foreground: #ffffff;
-  --card: #1a1a24;
-  --card-foreground: #f9fafb;
+  --muted: #0c0c0c;
+  --muted-foreground: #8e8e93;
+  --border: rgba(255, 255, 255, 0.1);
+  --accent: #a8b1ff;
+  --accent-foreground: #000000;
+  --card: #0c0c0c;
+  --card-foreground: #ffffff;
   --card-border: rgba(255, 255, 255, 0.1);
-  --card-radius: 1.5rem;
-  --card-shadow: 0 14px 40px -10px rgba(0, 0, 0, 0.7), 0 0 25px -5px rgba(59, 130, 246, 0.12);
-  --badge-bg: rgba(59, 130, 246, 0.12);
-  --badge-text: #93c5fd;
-  --selection: #3b82f6;
-  --font-heading: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Display", sans-serif;
-  --font-body: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Text", sans-serif;
+  --card-radius: 0.5rem;
+  --card-shadow: none;
+  --badge-bg: rgba(255, 255, 255, 0.06);
+  --badge-text: #e0e0e0;
+  --selection: #a8b1ff;
+  --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Geist", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Text", "Geist", sans-serif;
 }
 
 [data-theme="swiss"] {
   --background: #ffffff;
   --foreground: #000000;
   --muted: #f4f4f4;
-  --muted-foreground: #444444;
+  --muted-foreground: #222222;
   --border: #000000;
   --accent: #ff0000;
   --accent-foreground: #ffffff;
@@ -48,46 +48,46 @@
   --badge-bg: #f4f4f4;
   --badge-text: #000000;
   --selection: #ff0000;
-  --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading: "Helvetica Neue", Helvetica, "Neue Haas Grotesk", Arial, sans-serif;
   --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 [data-theme="terminal"] {
   --background: #000000;
   --foreground: #00ff41;
-  --muted: #021406;
+  --muted: #021205;
   --muted-foreground: #008f11;
   --border: #00ff41;
   --accent: #00ff41;
   --accent-foreground: #000000;
-  --card: #020b04;
+  --card: #000000;
   --card-foreground: #00ff41;
   --card-border: #00ff41;
   --card-radius: 0px;
-  --card-shadow: 0 0 15px rgba(0, 255, 65, 0.15);
-  --badge-bg: #03210a;
+  --card-shadow: none;
+  --badge-bg: #031c07;
   --badge-text: #00ff41;
   --selection: #00ff41;
-  --font-heading: "Courier New", Courier, "JetBrains Mono", monospace;
-  --font-body: "Courier New", Courier, "JetBrains Mono", monospace;
+  --font-heading: "JetBrains Mono", "Fira Code", "Courier New", monospace;
+  --font-body: "JetBrains Mono", "Fira Code", "Courier New", monospace;
 }
 
 [data-theme="brutalist"] {
-  --background: #fffdf8;
+  --background: #f4f4f0;
   --foreground: #000000;
-  --muted: #f5eedf;
-  --muted-foreground: #222222;
+  --muted: #eae8dd;
+  --muted-foreground: #111111;
   --border: #000000;
-  --accent: #ffe600;
+  --accent: #faff00;
   --accent-foreground: #000000;
   --card: #ffffff;
   --card-foreground: #000000;
   --card-border: #000000;
   --card-radius: 0px;
   --card-shadow: 6px 6px 0px #000000;
-  --badge-bg: #ffe600;
+  --badge-bg: #faff00;
   --badge-text: #000000;
-  --selection: #ffe600;
+  --selection: #faff00;
   --font-heading: "Arial Black", "Space Grotesk", Arial, sans-serif;
   --font-body: Arial, "Space Grotesk", sans-serif;
 }
@@ -96,20 +96,20 @@
   --background: #fdfbf7;
   --foreground: #2d2d2a;
   --muted: #f4efe6;
-  --muted-foreground: #6e6a63;
-  --border: rgba(45, 45, 42, 0.14);
-  --accent: #c85a32;
+  --muted-foreground: #6c685f;
+  --border: rgba(45, 45, 42, 0.15);
+  --accent: #cc7a6b;
   --accent-foreground: #ffffff;
-  --card: #ffffff;
+  --card: #faf7f0;
   --card-foreground: #2d2d2a;
   --card-border: rgba(45, 45, 42, 0.12);
-  --card-radius: 1rem;
-  --card-shadow: 0 4px 24px -4px rgba(45, 45, 42, 0.06);
-  --badge-bg: #f5eedf;
-  --badge-text: #c85a32;
-  --selection: #c85a32;
-  --font-heading: Georgia, "Playfair Display", "Times New Roman", serif;
-  --font-body: -apple-system, BlinkMacSystemFont, "Lora", Georgia, serif;
+  --card-radius: 0.5rem;
+  --card-shadow: none;
+  --badge-bg: #f2ede4;
+  --badge-text: #cc7a6b;
+  --selection: #cc7a6b;
+  --font-heading: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Lora", Georgia, -apple-system, BlinkMacSystemFont, serif;
 }
 
 /* Base Body Application */
@@ -120,7 +120,7 @@ body {
   font-feature-settings: "rlig" 1, "calt" 1;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -138,70 +138,190 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 [data-theme="brutalist"] ::selection {
-  background-color: #ffe600;
+  background-color: #faff00;
   color: #000000;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
-   THEME-SPECIFIC ART DIRECTION RULES
+   1. OBSIDIAN DARK
+   Strict constraints:
+   - FORBIDDEN: Generic AI "dark mode" washed-out greys, purple/blue glowing orbs,
+     soft diffuse shadows, or playful rounded UI elements.
+   - Fonts: Extra-light (200) for large headers, Medium (500) body, Semi-bold (600) micro-copy. Tight tracking (-0.02em).
+   - Absolute zero drop shadows. Delineate depth entirely with 1px solid rgba(255,255,255,0.1) borders.
+   - Generous card padding (min 32px / 2rem). Stark 24px gutters.
    ═══════════════════════════════════════════════════════════════════ */
+[data-theme="obsidian"] {
+  background-color: #000000 !important;
+}
 
-/* 1. OBSIDIAN DARK: Glassmorphism, floating cards with glowing drop shadows */
+[data-theme="obsidian"] * {
+  box-shadow: none !important; /* Absolute zero drop shadows */
+}
+
+[data-theme="obsidian"] h1,
+[data-theme="obsidian"] h2 {
+  font-weight: 200 !important; /* Extra-light (200) for large headers */
+  letter-spacing: -0.02em !important; /* Tight tracking on headers */
+}
+
+[data-theme="obsidian"] h3,
+[data-theme="obsidian"] h4 {
+  font-weight: 400 !important;
+  letter-spacing: -0.015em !important;
+}
+
+[data-theme="obsidian"] p,
+[data-theme="obsidian"] li {
+  font-weight: 450 !important; /* Medium for body copy */
+}
+
+[data-theme="obsidian"] .font-mono,
+[data-theme="obsidian"] [class*="text-[10px]"],
+[data-theme="obsidian"] [class*="text-[11px]"],
+[data-theme="obsidian"] [class*="text-xs"] {
+  font-weight: 600 !important; /* Semi-bold (600) for micro-copy */
+}
+
 [data-theme="obsidian"] .rounded-2xl,
-[data-theme="obsidian"] .rounded-3xl {
-  background-color: rgba(26, 26, 36, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 14px 40px -10px rgba(0, 0, 0, 0.6), 0 0 20px -5px rgba(59, 130, 246, 0.1);
+[data-theme="obsidian"] .rounded-3xl,
+[data-theme="obsidian"] .rounded-xl {
+  border-radius: 0.5rem !important; /* Non-playful, sleek geometric radius */
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background-color: #0c0c0c !important;
+  padding: 2rem !important; /* Minimum 32px internal card padding */
 }
 
 [data-theme="obsidian"] .rounded-2xl:hover,
-[data-theme="obsidian"] .rounded-3xl:hover {
-  border-color: rgba(59, 130, 246, 0.4);
-  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.8), 0 0 30px -5px rgba(59, 130, 246, 0.25);
+[data-theme="obsidian"] .rounded-3xl:hover,
+[data-theme="obsidian"] .rounded-xl:hover {
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: none !important;
 }
 
-/* 2. SWISS MINIMAL: Completely flat, 0px radius, zero shadows, pure red accent */
+[data-theme="obsidian"] header {
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme="obsidian"] h1 span.bg-clip-text {
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   2. SWISS MINIMAL
+   Strict constraints:
+   - FORBIDDEN: Any form of drop shadow, gradient, rounded corners,
+     illustrations, or decorative UI elements.
+   - 0px border-radius globally, flat, thin 1px solid black lines as dividers.
+   - Oversized brutal headings with tight line-height (0.9 to 1.05), crisp 14px body copy.
+   - Loose tracking for uppercase sub-labels. Single pure red (#FF0000) accent.
+   ═══════════════════════════════════════════════════════════════════ */
 [data-theme="swiss"] * {
-  border-radius: 0px !important;
-  box-shadow: none !important;
+  border-radius: 0px !important; /* border-radius: 0px globally */
+  box-shadow: none !important; /* zero drop shadows */
+  background-image: none !important; /* no gradients */
 }
 
 [data-theme="swiss"] h1,
 [data-theme="swiss"] h2,
 [data-theme="swiss"] h3 {
-  letter-spacing: -0.04em;
-  line-height: 1.08;
-  font-weight: 800;
+  font-family: "Helvetica Neue", Helvetica, "Neue Haas Grotesk", Arial, sans-serif !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 0.98 !important; /* Uncomfortably tight line-height */
+  color: #000000 !important;
 }
 
-[data-theme="swiss"] .rounded-2xl,
-[data-theme="swiss"] .rounded-3xl,
-[data-theme="swiss"] .rounded-xl {
-  border-width: 1px;
-  border-color: #000000;
-  background-color: #ffffff;
+[data-theme="swiss"] h1 {
+  font-size: clamp(2.75rem, 6vw, 4.5rem) !important;
 }
 
-[data-theme="swiss"] [class*="tracking-wider"] {
+[data-theme="swiss"] p,
+[data-theme="swiss"] li {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #000000 !important;
+}
+
+[data-theme="swiss"] [class*="tracking-wider"],
+[data-theme="swiss"] .font-mono {
   letter-spacing: 0.18em !important;
   text-transform: uppercase !important;
   font-weight: 700 !important;
 }
 
-/* 3. CYBER TERMINAL: Pure monospace, 0px radius, CRT glow, neon green */
-[data-theme="terminal"] * {
-  font-family: "Courier New", Courier, "JetBrains Mono", ui-monospace, monospace !important;
+[data-theme="swiss"] .rounded-2xl,
+[data-theme="swiss"] .rounded-3xl,
+[data-theme="swiss"] .rounded-xl,
+[data-theme="swiss"] .rounded-lg,
+[data-theme="swiss"] .rounded-full {
+  border: 1px solid #000000 !important;
+  background-color: #ffffff !important;
   border-radius: 0px !important;
 }
 
-[data-theme="terminal"] h1,
-[data-theme="terminal"] h2,
-[data-theme="terminal"] h3,
-[data-theme="terminal"] h4,
-[data-theme="terminal"] .font-bold {
-  text-shadow: 0 0 8px rgba(0, 255, 65, 0.45);
+[data-theme="swiss"] h1 span.bg-clip-text {
+  background: none !important;
+  -webkit-text-fill-color: #000000 !important;
+  color: #000000 !important;
+}
+
+[data-theme="swiss"] a[class*="bg-[var(--foreground)]"],
+[data-theme="swiss"] button[class*="bg-[var(--foreground)]"] {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+  border-radius: 0px !important;
+}
+
+[data-theme="swiss"] a[class*="bg-[var(--foreground)]"]:hover,
+[data-theme="swiss"] button[class*="bg-[var(--foreground)]"]:hover {
+  background-color: #ff0000 !important;
+  color: #ffffff !important;
+  border-color: #ff0000 !important;
+}
+
+[data-theme="swiss"] hr,
+[data-theme="swiss"] .border-t,
+[data-theme="swiss"] .border-b,
+[data-theme="swiss"] header,
+[data-theme="swiss"] footer {
+  border-color: #000000 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   3. CYBER TERMINAL
+   Strict constraints:
+   - FORBIDDEN: Glowing sci-fi neon movie tropes, illegible "hacker" layouts,
+     rounded corners, or soft backgrounds. Raw engineering tool.
+   - Monospace everywhere (JetBrains Mono / Fira Code / Courier New).
+   - High information density (12-13px body, line-height 1.5, 4-12px padding).
+   - 0px border-radius, 1px solid #00FF41 borders.
+   - Active states: inverted solid block background (#00FF41) with #000000 text.
+   ═══════════════════════════════════════════════════════════════════ */
+[data-theme="terminal"] * {
+  font-family: "JetBrains Mono", "Fira Code", "Courier New", monospace !important;
+  border-radius: 0px !important;
+  box-shadow: none !important; /* FORBIDDEN: glowing diffuse sci-fi shadows */
+  text-shadow: none !important; /* FORBIDDEN: glowing neon tropes */
+}
+
+[data-theme="terminal"] {
+  background-color: #000000 !important;
+  color: #00ff41 !important;
+}
+
+[data-theme="terminal"] p,
+[data-theme="terminal"] li,
+[data-theme="terminal"] span,
+[data-theme="terminal"] div {
+  font-size: 13px;
+  line-height: 1.5 !important;
 }
 
 [data-theme="terminal"] .rounded-2xl,
@@ -209,8 +329,42 @@ h1, h2, h3, h4, h5, h6 {
 [data-theme="terminal"] .rounded-xl,
 [data-theme="terminal"] .rounded-lg {
   border: 1px solid #00ff41 !important;
-  background-color: #010803 !important;
-  box-shadow: 0 0 12px rgba(0, 255, 65, 0.12) !important;
+  background-color: #000000 !important;
+  padding: 14px 18px !important;
+}
+
+[data-theme="terminal"] header,
+[data-theme="terminal"] footer,
+[data-theme="terminal"] .border,
+[data-theme="terminal"] .border-t,
+[data-theme="terminal"] .border-b {
+  border-color: #00ff41 !important;
+}
+
+/* Active states: inverted solid block background (#00FF41) with #000000 text */
+[data-theme="terminal"] a[class*="bg-[var(--foreground)]"],
+[data-theme="terminal"] button[class*="bg-[var(--foreground)]"] {
+  background-color: #00ff41 !important;
+  color: #000000 !important;
+  border: 1px solid #00ff41 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="terminal"] nav a:hover,
+[data-theme="terminal"] a:hover {
+  background-color: #00ff41 !important;
+  color: #000000 !important;
+}
+
+[data-theme="terminal"] .text-\[var\(--muted-foreground\)\],
+[data-theme="terminal"] [class*="text-muted-foreground"] {
+  color: #008f11 !important;
+}
+
+[data-theme="terminal"] h1 span.bg-clip-text {
+  background: none !important;
+  -webkit-text-fill-color: #00ff41 !important;
+  color: #00ff41 !important;
 }
 
 [data-theme="terminal"] input,
@@ -221,9 +375,23 @@ h1, h2, h3, h4, h5, h6 {
   caret-color: #00ff41 !important;
 }
 
-/* 4. NEO BRUTALIST: Thick 3px black borders, hard offset 6px-8px shadows, electric yellow */
+/* ═══════════════════════════════════════════════════════════════════
+   4. NEO BRUTALIST
+   Strict constraints:
+   - FORBIDDEN: Soft drop shadows, gradients, rounded "SaaS" aesthetics,
+     floating elements, or centered generic layouts.
+   - Thick solid black borders (2px to 4px) on absolutely everything.
+   - Hard, unblurred offset drop shadows (6px 6px 0px #000000).
+   - Chunky oversized padding inside buttons, electric yellow (#FAFF00) accent.
+   - Bold, character-heavy typefaces pushed to uncomfortable scales.
+   ═══════════════════════════════════════════════════════════════════ */
+[data-theme="brutalist"] {
+  background-color: #f4f4f0 !important;
+  color: #000000 !important;
+}
+
 [data-theme="brutalist"] * {
-  border-radius: 0px !important;
+  background-image: none !important; /* Zero gradients */
 }
 
 [data-theme="brutalist"] .rounded-2xl,
@@ -232,29 +400,54 @@ h1, h2, h3, h4, h5, h6 {
   border: 3px solid #000000 !important;
   box-shadow: 6px 6px 0px #000000 !important;
   background-color: #ffffff !important;
+  border-radius: 0px !important;
 }
 
 [data-theme="brutalist"] .rounded-2xl:hover,
-[data-theme="brutalist"] .rounded-3xl:hover {
+[data-theme="brutalist"] .rounded-3xl:hover,
+[data-theme="brutalist"] .rounded-xl:hover {
   transform: translate(-2px, -2px) !important;
-  box-shadow: 9px 9px 0px #000000 !important;
+  box-shadow: 8px 8px 0px #000000 !important;
+}
+
+[data-theme="brutalist"] h1,
+[data-theme="brutalist"] h2,
+[data-theme="brutalist"] h3 {
+  font-family: "Arial Black", "Space Grotesk", Arial, sans-serif !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.03em !important;
+  text-transform: uppercase !important;
+  color: #000000 !important;
+}
+
+[data-theme="brutalist"] h1 span.bg-clip-text {
+  background: none !important;
+  -webkit-text-fill-color: #000000 !important;
+  color: #000000 !important;
 }
 
 [data-theme="brutalist"] a[class*="bg-[var(--foreground)]"],
-[data-theme="brutalist"] button[class*="bg-[var(--foreground)]"],
-[data-theme="brutalist"] .submit-button {
-  border: 2px solid #000000 !important;
-  background-color: #ffe600 !important;
+[data-theme="brutalist"] button[class*="bg-[var(--foreground)]"] {
+  border: 3px solid #000000 !important;
+  background-color: #faff00 !important;
   color: #000000 !important;
-  box-shadow: 4px 4px 0px #000000 !important;
-  font-weight: 800 !important;
+  box-shadow: 5px 5px 0px #000000 !important;
+  font-weight: 900 !important;
+  padding: 12px 24px !important;
+  border-radius: 0px !important;
+  text-transform: uppercase !important;
 }
 
 [data-theme="brutalist"] a[class*="bg-[var(--foreground)]"]:hover,
-[data-theme="brutalist"] button[class*="bg-[var(--foreground)]"]:hover,
-[data-theme="brutalist"] .submit-button:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 6px 6px 0px #000000 !important;
+[data-theme="brutalist"] button[class*="bg-[var(--foreground)]"]:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 7px 7px 0px #000000 !important;
+}
+
+[data-theme="brutalist"] .rounded-full {
+  border-radius: 100px !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 3px 3px 0px #000000 !important;
 }
 
 [data-theme="brutalist"] input,
@@ -262,27 +455,127 @@ h1, h2, h3, h4, h5, h6 {
   border: 3px solid #000000 !important;
   background-color: #ffffff !important;
   box-shadow: 4px 4px 0px #000000 !important;
+  border-radius: 0px !important;
+  color: #000000 !important;
 }
 
-/* 5. WARM EDITORIAL: Classic serif headings, tall line-height (1.7), hairline borders */
+[data-theme="brutalist"] header,
+[data-theme="brutalist"] footer {
+  border-color: #000000 !important;
+  border-width: 2px !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   5. WARM EDITORIAL
+   Strict constraints:
+   - FORBIDDEN: Generic blue tech-bro color palettes, heavy shadows,
+     blocky web-buttons, or dense dashboards. High-end print lifestyle magazine.
+   - Classic serif headings (Playfair Display / Garamond / Georgia) + soft serif/sans body.
+   - Tactile but flat: ZERO drop shadows.
+   - Delicate hairline dividers (1px solid, 15% opacity).
+   - Tall line-heights (1.6 to 1.8), muted terracotta (#CC7A6B) accent.
+   ═══════════════════════════════════════════════════════════════════ */
+[data-theme="warm"] {
+  background-color: #fdfbf7 !important;
+  color: #2d2d2a !important;
+}
+
+[data-theme="warm"] * {
+  box-shadow: none !important; /* ZERO drop shadows */
+}
+
 [data-theme="warm"] h1,
 [data-theme="warm"] h2,
 [data-theme="warm"] h3 {
-  font-family: Georgia, "Playfair Display", "Times New Roman", serif !important;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.015em !important;
+  color: #2d2d2a !important;
 }
 
 [data-theme="warm"] p,
 [data-theme="warm"] li {
-  line-height: 1.7;
+  font-family: "Lora", Georgia, -apple-system, BlinkMacSystemFont, serif !important;
+  line-height: 1.75 !important; /* Tall line-height for body text */
+  color: #2d2d2a !important;
+}
+
+[data-theme="warm"] hr,
+[data-theme="warm"] .border,
+[data-theme="warm"] .border-t,
+[data-theme="warm"] .border-b,
+[data-theme="warm"] header,
+[data-theme="warm"] footer {
+  border-color: rgba(45, 45, 42, 0.15) !important;
 }
 
 [data-theme="warm"] .rounded-2xl,
-[data-theme="warm"] .rounded-3xl {
-  border: 1px solid rgba(45, 45, 42, 0.12);
-  background-color: #ffffff;
-  box-shadow: 0 4px 24px -4px rgba(45, 45, 42, 0.05);
+[data-theme="warm"] .rounded-3xl,
+[data-theme="warm"] .rounded-xl {
+  border: 1px solid rgba(45, 45, 42, 0.14) !important;
+  background-color: #faf7f0 !important;
+  border-radius: 0.5rem !important;
+  box-shadow: none !important;
+}
+
+[data-theme="warm"] a[class*="bg-[var(--foreground)]"],
+[data-theme="warm"] button[class*="bg-[var(--foreground)]"] {
+  background-color: #cc7a6b !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+[data-theme="warm"] a[class*="bg-[var(--foreground)]"]:hover,
+[data-theme="warm"] button[class*="bg-[var(--foreground)]"]:hover {
+  background-color: #b8695b !important;
+  box-shadow: none !important;
+}
+
+[data-theme="warm"] [class*="tracking-wider"] {
+  font-style: italic !important;
+  color: #cc7a6b !important;
+}
+
+[data-theme="warm"] h1 span.bg-clip-text {
+  background: none !important;
+  -webkit-text-fill-color: #cc7a6b !important;
+  color: #cc7a6b !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   INTERACTIVE COMPONENTS INTEGRATION
+   (Flippable Bento Card & Contact UI)
+   ═══════════════════════════════════════════════════════════════════ */
+[data-theme="obsidian"] .perspective-1200 > div > div {
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 0.5rem !important;
+}
+
+[data-theme="swiss"] .perspective-1200 > div > div {
+  border: 1px solid #000000 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+
+[data-theme="terminal"] .perspective-1200 > div > div {
+  border: 1px solid #00ff41 !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+}
+
+[data-theme="brutalist"] .perspective-1200 > div > div {
+  border: 3px solid #000000 !important;
+  box-shadow: 6px 6px 0px #000000 !important;
+  border-radius: 0px !important;
+}
+
+[data-theme="warm"] .perspective-1200 > div > div {
+  border: 1px solid rgba(45, 45, 42, 0.15) !important;
+  box-shadow: none !important;
+  border-radius: 0.5rem !important;
 }
 
 /* Custom scrollbars */

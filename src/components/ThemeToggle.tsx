@@ -5,11 +5,11 @@ import { useTheme, Theme } from "./ThemeProvider";
 import { Palette, Sparkles, Terminal, Square, Sun, Moon } from "lucide-react";
 
 const THEME_OPTIONS: { id: Theme; name: string; icon: React.ReactNode; color: string }[] = [
-  { id: "obsidian", name: "Obsidian Dark", icon: <Moon className="w-3.5 h-3.5" />, color: "#3B82F6" },
+  { id: "obsidian", name: "Obsidian Dark", icon: <Moon className="w-3.5 h-3.5" />, color: "#A8B1FF" },
   { id: "swiss", name: "Swiss Minimal", icon: <Sun className="w-3.5 h-3.5" />, color: "#FF0000" },
   { id: "terminal", name: "Cyber Terminal", icon: <Terminal className="w-3.5 h-3.5" />, color: "#00FF41" },
-  { id: "brutalist", name: "Neo Brutalist", icon: <Square className="w-3.5 h-3.5" />, color: "#FFE600" },
-  { id: "warm", name: "Warm Editorial", icon: <Sparkles className="w-3.5 h-3.5" />, color: "#C85A32" },
+  { id: "brutalist", name: "Neo Brutalist", icon: <Square className="w-3.5 h-3.5" />, color: "#FAFF00" },
+  { id: "warm", name: "Warm Editorial", icon: <Sparkles className="w-3.5 h-3.5" />, color: "#CC7A6B" },
 ];
 
 export function ThemeToggle() {
