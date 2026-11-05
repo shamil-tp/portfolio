@@ -1,18 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
-import { content, AchievementItem, CertificationItem } from "@/data/content";
-import { Trophy, Award, Calendar, MapPin, ExternalLink, X, Eye } from "lucide-react";
-import { motion, useReducedMotion, type Variants } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { content } from "@/data/content";
+import { Trophy, Award, MapPin, Eye, X } from "lucide-react";
+import { motion, type Variants } from "framer-motion";
 
 export function AchievementsSection() {
-  const shouldReduceMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
   const [selectedCert, setSelectedCert] = useState<{
     title: string;
     image: string;
     org: string;
   } | null>(null);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Trophy Spotlight & Diagonal Flip Zoom Variants
   const containerVariants: Variants = {
@@ -41,25 +44,127 @@ export function AchievementsSection() {
     },
   };
 
+  // Server & Initial Hydration Pass: Static HTML
+  if (!mounted) {
+    return (
+      <div className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {content.achievements.map((item) => (
+            <div
+              key={item.id}
+              className="group p-6 rounded-2xl border border-[var(--card-border)] bg-[var(--card)] flex flex-col justify-between"
+            >
+              <div className="space-y-3">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 text-xs font-mono font-semibold rounded-full bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/20">
+                    <Trophy className="w-3.5 h-3.5" />
+                    {item.result}
+                  </span>
+                  <span className="text-xs font-mono text-[var(--muted-foreground)]">
+                    {item.date}
+                  </span>
+                </div>
+
+                <h4 className="text-lg font-bold text-[var(--foreground)]">
+                  {item.title}
+                </h4>
+
+                <p className="text-xs font-medium text-[var(--muted-foreground)]">
+                  {item.org}
+                </p>
+
+                <div className="space-y-1 text-xs text-[var(--muted-foreground)] leading-relaxed">
+                  {item.meta.map((m, mIdx) => (
+                    <p key={mIdx}>{m}</p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-4 mt-4 border-t border-[var(--border)]/60 flex items-center justify-between">
+                <span className="inline-flex items-center gap-1 text-[11px] font-mono text-[var(--muted-foreground)]">
+                  <MapPin className="w-3 h-3" />
+                  {item.place}
+                </span>
+
+                <button
+                  onClick={() =>
+                    setSelectedCert({
+                      title: item.title,
+                      image: item.certificate.original,
+                      org: item.org,
+                    })
+                  }
+                  className="inline-flex items-center gap-1 text-xs font-mono text-[var(--accent)] hover:underline"
+                >
+                  <Eye className="w-3.5 h-3.5" />
+                  <span>Certificate</span>
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Certifications Row */}
+        <div className="space-y-4 pt-4 border-t border-[var(--border)]">
+          <div className="flex items-center gap-2">
+            <Award className="w-4 h-4 text-[var(--accent)]" />
+            <h3 className="text-sm font-bold text-[var(--foreground)] font-mono uppercase tracking-wider">
+              Verified Certifications
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            {content.certifications.map((cert) => (
+              <div
+                key={cert.id}
+                className="p-3.5 rounded-xl border border-[var(--card-border)] bg-[var(--card)] flex items-center justify-between gap-3"
+              >
+                <div className="min-w-0">
+                  <div className="text-xs font-bold text-[var(--foreground)] truncate">
+                    {cert.title}
+                  </div>
+                  <div className="text-[11px] text-[var(--muted-foreground)] font-mono">
+                    {cert.org} · {cert.date}
+                  </div>
+                </div>
+
+                <button
+                  onClick={() =>
+                    setSelectedCert({
+                      title: cert.title,
+                      image: cert.certificate.original,
+                      org: cert.org,
+                    })
+                  }
+                  className="p-1.5 rounded-lg border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:border-[var(--accent)] shrink-0"
+                  title="View certification preview"
+                >
+                  <Eye className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Client Pass: Trophy Spotlight & Diagonal Zoom Animation
   return (
     <div className="space-y-8">
       {/* Hackathons & Competitions */}
       <motion.div
         variants={containerVariants}
-        initial={shouldReduceMotion ? "visible" : "hidden"}
+        initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-60px" }}
         className="grid grid-cols-1 md:grid-cols-2 gap-5"
       >
-        {content.achievements.map((item, idx) => (
+        {content.achievements.map((item) => (
           <motion.div
             key={item.id}
             variants={trophyCardVariants}
-            whileHover={
-              shouldReduceMotion
-                ? {}
-                : { y: -5, scale: 1.015, transition: { duration: 0.25 } }
-            }
+            whileHover={{ y: -5, scale: 1.015, transition: { duration: 0.25 } }}
             className="group p-6 rounded-2xl border border-[var(--card-border)] bg-[var(--card)] hover:border-[var(--accent)] transition-all flex flex-col justify-between"
           >
             <div className="space-y-3">
@@ -114,8 +219,8 @@ export function AchievementsSection() {
 
       {/* Certifications Row */}
       <motion.div
-        initial={shouldReduceMotion ? {} : { opacity: 0, y: 30 }}
-        whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-40px" }}
         transition={{ duration: 0.6 }}
         className="space-y-4 pt-4 border-t border-[var(--border)]"
@@ -131,7 +236,7 @@ export function AchievementsSection() {
           {content.certifications.map((cert) => (
             <motion.div
               key={cert.id}
-              whileHover={shouldReduceMotion ? {} : { scale: 1.02 }}
+              whileHover={{ scale: 1.02 }}
               className="p-3.5 rounded-xl border border-[var(--card-border)] bg-[var(--card)] hover:border-[var(--accent)]/60 transition-colors flex items-center justify-between gap-3"
             >
               <div className="min-w-0">
