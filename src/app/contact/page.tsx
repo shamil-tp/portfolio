@@ -29,7 +29,7 @@ export default function ContactPage() {
           <span>Direct Contact Portal</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-[var(--foreground)] tracking-tight">
-          Get In Touch
+          Get In Touch with Shamil TP
         </h1>
         <p className="text-base sm:text-lg text-[var(--muted-foreground)] leading-relaxed">
           Whether you have a distributed systems question, an engineering opportunity, or a project to build, send a direct message below.

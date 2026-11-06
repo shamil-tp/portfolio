@@ -30,7 +30,7 @@ export default function ExperiencePage() {
           <span>Career Timeline</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-[var(--foreground)] tracking-tight">
-          Experience &amp; Education
+          Experience &amp; Education of Shamil TP
         </h1>
         <p className="text-base sm:text-lg text-[var(--muted-foreground)] leading-relaxed">
           Production roles, freelance system architecture, and formal academic training in computer applications.

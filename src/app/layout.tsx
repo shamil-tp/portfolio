@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Shamil TP",
   },
   description:
-    "Full Stack Developer & Backend Systems Engineer from Kerala, India. Specializing in high-throughput APIs, distributed systems, Linux home servers, and Next.js.",
+    "Explore the portfolio of Shamil TP, a Full Stack Developer & Backend Systems Engineer from Kerala, India. Specializing in high-throughput APIs, distributed systems, Linux home servers, and Next.js.",
   keywords: [
     "Shamil TP",
     "shamil-tp",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     url: "https://shamiltp.life",
     title: "Shamil TP — Full Stack Developer | Backend & Systems Engineer",
     description:
-      "Full Stack Developer & Backend Systems Engineer from Kerala, India. Specializing in high-throughput APIs, distributed systems, Linux home servers, and Next.js.",
+      "Explore the portfolio of Shamil TP, a Full Stack Developer & Backend Systems Engineer from Kerala, India. Specializing in high-throughput APIs, distributed systems, Linux home servers, and Next.js.",
     siteName: "Shamil TP Portfolio",
     images: [
       {
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Shamil TP — Full Stack Developer | Backend & Systems Engineer",
     description:
-      "Full Stack Developer & Backend Systems Engineer from Kerala, India. Specializing in high-throughput APIs, distributed systems, Linux home servers, and Next.js.",
+      "Explore the portfolio of Shamil TP, a Full Stack Developer & Backend Systems Engineer from Kerala, India. Specializing in high-throughput APIs, distributed systems, Linux home servers, and Next.js.",
     creator: "@ShamilTp6",
     images: ["/assets/og/home.png"],
   },
