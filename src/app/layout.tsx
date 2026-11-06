@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   keywords: [
     "Shamil TP",
     "shamil-tp",
+    "shamil tp",
     "shamiltp.life",
     "Shamil Developer",
     "Full Stack Developer",
@@ -134,7 +135,7 @@ const jsonLd = {
       "@type": "Person",
       "@id": "https://shamiltp.life/#person",
       "name": "Shamil TP",
-      "alternateName": ["Shamil", "Shamil T P", "shamil-tp"],
+      "alternateName": ["Shamil", "Shamil T P", "shamil-tp", "shamil tp"],
       "url": "https://shamiltp.life",
       "image": "https://shamiltp.life/myProfileImg.jpeg",
       "jobTitle": "Full Stack Developer",
