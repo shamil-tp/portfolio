@@ -22,7 +22,7 @@ export default function AchievementsPage() {
           <span>Honors &amp; Proofs</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-[var(--foreground)] tracking-tight">
-          Achievements &amp; Certificates
+          Shamil TP&apos;s Achievements &amp; Certificates
         </h1>
         <p className="text-base sm:text-lg text-[var(--muted-foreground)] leading-relaxed">
           Competitions, hackathon finalist placements, academic symposiums, and verified professional certifications.

@@ -30,7 +30,7 @@ export default function SkillsPage() {
           <span>Technical Stack</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-extrabold text-[var(--foreground)] tracking-tight">
-          Skills &amp; Capabilities
+          Technical Skills of Shamil TP
         </h1>
         <p className="text-base sm:text-lg text-[var(--muted-foreground)] leading-relaxed">
           The languages, distributed storage engines, streaming protocols, and CI/CD tools I use to build dependable server-side architectures.

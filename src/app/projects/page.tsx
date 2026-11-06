@@ -72,7 +72,7 @@ export default function ProjectsPage() {
           <span>Case Studies &amp; Open Source</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-[var(--foreground)] tracking-tight">
-          All Projects ({content.projects.length})
+          Shamil TP&apos;s Projects ({content.projects.length})
         </h1>
         <p className="text-sm sm:text-base text-[var(--muted-foreground)] leading-relaxed">
           From AI incident response agents and self-hosted streaming backends to custom compression algorithms and client systems.
